@@ -54,11 +54,13 @@
       }
     }
 
-    &__password {
+    &__label {
       padding: 1rem;
       border-radius: 5px;
       background-color: #0000003f;
       color: rgb(219, 219, 219);
+      font-family: vars.$font-regular;
+      width: 80%;
     }
   }
 
@@ -66,13 +68,19 @@
     &__device {
       display: flex;
       justify-content: space-around;
-      width: 100px;
+      align-items: center;
+      width: 180px;
       position: absolute;
       bottom: 10px;
       right: 10px;
 
       &__icon {
         height: 1.5rem;
+      }
+
+      &__time {
+        color: rgb(219, 219, 219);
+        font-family: vars.$font-regular;
       }
     }
   }
@@ -81,13 +89,20 @@
 
 @media (min-width: 1024px) {
   .home-profile {
+    &__form {
+      &__input {
+        height: 2rem;
+        width: 15rem;
+        font-size: 0.9rem;
+      }
+    }
     &__mobile-alert {
       display: none;
     }
 
     &__info {
       &__device {
-        width: 150px;
+        width: 250px;
       }
     }
   }

@@ -1,6 +1,12 @@
 @font-face {
-  font-family: 'roboto';
+  font-family: 'roboto-medium';
   src: url(../assets/font/Roboto/Roboto-Medium.ttf);
 }
 
-$font-medium: 'roboto';
+@font-face {
+  font-family: 'roboto-regular';
+  src: url(../assets/font/Roboto/Roboto-Regular.ttf);
+}
+
+$font-medium: 'roboto-medium';
+$font-regular: 'roboto-regular';
