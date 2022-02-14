@@ -8,5 +8,11 @@
   src: url(../assets/font/Roboto/Roboto-Regular.ttf);
 }
 
+@font-face {
+  font-family: 'roboto-thin';
+  src: url(../assets/font/Roboto/Roboto-Thin.ttf);
+}
+
 $font-medium: 'roboto-medium';
 $font-regular: 'roboto-regular';
+$font-thin: 'roboto-thin';

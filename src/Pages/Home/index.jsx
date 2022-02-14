@@ -1,8 +1,14 @@
+/*==================================================================*|
+|*----------------HomePage of "connected" user----------------------*|
+|*==================================================================*/
+
 import './styles.scss';
+// local component ----------------------------------
+import Navbar from '../../Components/Navbar';
 
 const Home = () => (
   <div className="home">
-    ma petite homepage d'amour
+    <Navbar />
   </div>
 );
 

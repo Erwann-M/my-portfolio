@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
 import {Routes, Route} from 'react-router-dom';
+import Error from '../Pages/Error';
 import Home from '../Pages/Home';
 
 import HomeConnection from '../Pages/HomeConnection';
@@ -10,6 +11,7 @@ const RouteMap = () => {
     <Routes>
       {!loggedIn && <Route path="/" element={<HomeConnection />} />}
       {loggedIn && <Route path="/" element={<Home />} />}
+      <Route path="/*" element={<Error />} />
     </Routes>
   )
 }

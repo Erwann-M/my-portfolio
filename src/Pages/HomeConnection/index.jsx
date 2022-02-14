@@ -1,5 +1,6 @@
-import HomeProfile from '../../Components/HomeProfile';
 import './styles.scss';
+// local component --------------------------------------------
+import HomeProfile from '../../Components/HomeProfile';
 
 const HomeConnection = () => (
   <div className="home-connection">

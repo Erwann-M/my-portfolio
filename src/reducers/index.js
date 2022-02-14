@@ -1,8 +1,13 @@
-import { GET_TIME, SET_LOGIN } from "../action";
+/*==================================================================*|
+|*-----------------Reducer (contain state)--------------------------*|
+|*==================================================================*/
+
+import { GET_DATE, GET_TIME, SET_LOGIN } from "../action";
 
 const initialState = {
-  loggedIn: false,
+  loggedIn: true,
   time: "",
+  date: "",
 };
 
 const reducer = (state = initialState, action = {}) => {
@@ -11,6 +16,11 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         time: new Date().toLocaleTimeString(),
+      };
+    case GET_DATE:
+      return {
+        ...state,
+        date: new Date().toLocaleDateString(),
       };
     case SET_LOGIN:
       return {
