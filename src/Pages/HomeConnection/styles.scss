@@ -1,0 +1,16 @@
+.home-connection {
+  background-image: url('../../assets/img/Saint_mary_lake_usa.jpg');
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+
+  &__container {
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,5 +1,6 @@
 const initialState = {
-  login: false
+  login: false,
+  time: new Date().toLocaleString()
 };
 
 const reducer = (state = initialState, action = {}) => {
