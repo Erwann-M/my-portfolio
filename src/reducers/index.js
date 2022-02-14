@@ -1,7 +1,7 @@
-import { GET_TIME } from "../action";
+import { GET_TIME, SET_LOGIN } from "../action";
 
 const initialState = {
-  login: false,
+  loggedIn: false,
   time: "",
 };
 
@@ -11,7 +11,12 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         time: new Date().toLocaleTimeString(),
-      }
+      };
+    case SET_LOGIN:
+      return {
+        ...state,
+        loggedIn: true,
+      };
     default:
       return state;
   }
