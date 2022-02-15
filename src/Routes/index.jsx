@@ -11,6 +11,7 @@ const RouteMap = () => {
     <Routes>
       {!loggedIn && <Route path="/" element={<HomeConnection />} />}
       {loggedIn && <Route path="/" element={<Home />} />}
+      <Route path="/menu" element={<Home type="Menu" />} />
       <Route path="/*" element={<Error />} />
     </Routes>
   )

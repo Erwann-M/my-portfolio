@@ -2,12 +2,16 @@
 |*-----------------Reducer (contain state)--------------------------*|
 |*==================================================================*/
 
-import { GET_DATE, GET_TIME, SET_LOGIN } from "../action";
+import { GET_DATE, GET_TIME, SET_LOGIN, TOGGLE_MENU } from "../action";
 
 const initialState = {
   loggedIn: true,
   time: "",
   date: "",
+  trashDrag: {
+
+  },
+  menuToggled: false,
 };
 
 const reducer = (state = initialState, action = {}) => {
@@ -27,6 +31,11 @@ const reducer = (state = initialState, action = {}) => {
         ...state,
         loggedIn: true,
       };
+    case TOGGLE_MENU:
+      return {
+        ...state,
+        menuToggled: !state.menuToggled,
+      }
     default:
       return state;
   }

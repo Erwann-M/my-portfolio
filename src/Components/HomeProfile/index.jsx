@@ -49,7 +49,7 @@ const HomeProfile = () => {
 
   // display profile and info of bottom screen part
   return(
-    <div className='home-profile'>
+    <div className="home-profile">
 
       <p className='home-profile__mobile-alert'>Pour une expérience plus amusante, visitez ce portfolio sur ordinateur.</p>
 

@@ -19,3 +19,9 @@ export const GET_DATE = "GET_DATE";
 export const getDate = () => ({
   type: GET_DATE,  
 });
+
+export const TOGGLE_MENU = "TOGGLE_MENU";
+
+export const toggleMenu = () => ({
+  type: TOGGLE_MENU,
+});

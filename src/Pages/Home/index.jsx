@@ -6,7 +6,7 @@ import './styles.scss';
 // local component ----------------------------------
 import Navbar from '../../Components/Navbar';
 
-const Home = () => (
+const Home = (props={}) => (
   <div className="home">
     <Navbar />
   </div>
