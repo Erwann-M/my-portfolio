@@ -40,10 +40,10 @@ const Navbar = () => {
     <div className="navbar">
       <nav className='navbar__icon'>
         <ul className='navbar__icon__list'>
-          <li><img src={homeIcon} alt="Menu principal" title='Menu' /></li>
-          <li><img src={chromeIcon} alt="Navigateur internet" title='Navigateur internet' /></li>
-          <li><img src={explorerIcon} alt="Explorer mes projets" title='Explorateur de projets' /></li>
-          <li><img src={emailIcon} alt="Me contacter" /></li>
+          <li><img src={homeIcon} alt="Menu principal" title='Menu' className='navbar__icon__list__img' /></li>
+          <li><img src={chromeIcon} alt="Navigateur internet" title='Navigateur internet' className='navbar__icon__list__img' /></li>
+          <li><img src={explorerIcon} alt="Explorer mes projets" title='Explorateur de projets' className='navbar__icon__list__img' /></li>
+          <li><img src={emailIcon} alt="Me contacter" className='navbar__icon__list__img' /></li>
         </ul>
       </nav>
 
@@ -54,7 +54,7 @@ const Navbar = () => {
 
       <div className='navbar__info'>
         <div className="navbar__info__container">
-          
+
           <img src={arrowUp} alt="Voir plus d'options" className='navbar__info__toggle navbar__info__icon' />
 
           <div className='navbar__info__system'>
