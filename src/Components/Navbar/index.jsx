@@ -9,6 +9,7 @@ import wifi from '../../assets/icons/wifi.png';
 import sound from '../../assets/icons/sound.png';
 import battery from '../../assets/icons/battery.png';
 import trash from '../../assets/icons/Recycle-bin.png';
+import ploy from '../../assets/icons/minus.svg';
 // library ------------------------------------------------
 import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
@@ -63,16 +64,16 @@ const Navbar = () => {
       <nav className='navbar__icon'>
         <ul className='navbar__icon__list'>
 
-          <li onClick={handleClickMenu}>
+          <li onClick={handleClickMenu} className="navbar__icon__list__item" >
             <img 
               src={homeIcon} 
               alt="Menu principal" 
               title='Menu' 
-              className={'navbar__icon__list__img' + (menuToggled ? ' active' : '')}
+              className={'navbar__icon__list__img' + (menuToggled ? ' icon-active' : '')}
             />
           </li>
 
-          <li onClick={handleClickBrowser}>
+          <li onClick={handleClickBrowser} className="navbar__icon__list__item" >
             <img 
               src={chromeIcon} 
               alt="Navigateur internet" 
@@ -81,7 +82,7 @@ const Navbar = () => {
             />
           </li>
 
-          <li onClick={handleClickProject}>
+          <li onClick={handleClickProject} className="navbar__icon__list__item" >
             <img 
               src={explorerIcon} 
               alt="Explorer mes projets" 
@@ -90,7 +91,7 @@ const Navbar = () => {
             />
           </li>
 
-          <li onClick={handleClickContact}>
+          <li onClick={handleClickContact} className="navbar__icon__list__item" >
             <img 
               src={emailIcon} 
               alt="Me contacter" 
