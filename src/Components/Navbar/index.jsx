@@ -9,15 +9,14 @@ import wifi from '../../assets/icons/wifi.png';
 import sound from '../../assets/icons/sound.png';
 import battery from '../../assets/icons/battery.png';
 import trash from '../../assets/icons/Recycle-bin.png';
-import ploy from '../../assets/icons/minus.svg';
 // library ------------------------------------------------
 import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import Draggable from 'react-draggable';
 // local components ------------------------------------------------
 import { getTime, getDate, toggleMenu } from '../../action';
-import Menu from '../../Pages/Menu';
+import Menu from '../Menu';
+import Draggable from 'react-draggable';
 
 const Navbar = () => {
 
@@ -104,7 +103,11 @@ const Navbar = () => {
       </nav>
 
       <Draggable>
-        <div className="navbar__trash" onDoubleClick={handleClickTrash} title="Cliquez deplacer ou double clique pour ouvrir" >
+        <div 
+          className="navbar__trash" 
+          onDoubleClick={handleClickTrash} 
+          title="Cliquez deplacer ou double clique pour ouvrir" 
+        >
           <img src={trash} alt="icone de corbeille" className='navbar__trash__icon' />
           <p className='navbar__trash__title'>Corbeille</p>
         </div>

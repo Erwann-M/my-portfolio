@@ -1,0 +1,28 @@
+@use 'src/styles/vars';
+
+.weather {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  &__image {
+    width: 35%;
+  }
+
+  &__info {
+    width: 55%;
+
+    &__location {
+      font-family: vars.$font-medium;
+      font-size: 1.3rem;
+    }
+
+    &__temp {
+      font-family: vars.$font-medium;
+    }
+
+    &__description {
+      font-family: vars.$font-medium;
+    }
+  }
+}

@@ -8,6 +8,7 @@
     display: flex;
     position: absolute;
     bottom: 0px;
+    z-index: 100;
     background-color: rgba(0, 0, 0, 0.527);
 
     &__list {
@@ -56,6 +57,7 @@
     align-items: center;
     position: absolute;
     top: 0px;
+    z-index: 100;
     background-color: rgba(0, 0, 0, 0.527);
 
     &__container {
