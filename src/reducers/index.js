@@ -2,14 +2,14 @@
 |*-----------------Reducer (contain state)--------------------------*|
 |*==================================================================*/
 
-import { GET_DATE, GET_TIME, SAVE_WEATHER_INFO, SET_LOGIN, TOGGLE_MENU } from "../action";
+import { GET_DATE, GET_TIME, SAVE_WEATHER_INFO, SET_LOGIN, TOGGLE_MENU, UNSET_LOGIN } from "../action";
 
 const initialState = {
-  loggedIn: true,
+  loggedIn: false,
   time: "",
   date: "",
   menuToggled: false,
-  weatherInfo: {},
+  weatherInfo: [],
 };
 
 const reducer = (state = initialState, action = {}) => {
@@ -38,6 +38,12 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         weatherInfo: action.weatherInfo,
+      }
+    case UNSET_LOGIN:
+      return {
+        ...state,
+        loggedIn: false,
+        menuToggled: false,
       }
     default:
       return state;

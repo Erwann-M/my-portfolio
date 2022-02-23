@@ -43,3 +43,10 @@ export const saveWeatherInfo = (weatherInfo) => ({
   type: SAVE_WEATHER_INFO,
   weatherInfo,
 });
+
+
+export const UNSET_LOGIN = "UNSET_LOGIN";
+
+export const unsetLogin = () => ({
+  type: UNSET_LOGIN,
+});

@@ -14,7 +14,7 @@ const Weather = () => {
   useEffect(
     () => {
       dispatch(getWeatherInfo())
-    }, [dispatch]
+    },[dispatch]
   );
 
   return(

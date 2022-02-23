@@ -5,6 +5,9 @@ const axiosInstance = axios.create({
   baseURL: "https://api.openweathermap.org/data/2.5"
 });
 
+// ready for implement, but small problem, too many request to api. 
+//TODO : fix problem !!!
+
 const apiMiddlewareWeather = (store) => (next) => (action) => {
   switch(action.type) {
     case GET_WEATHER_INFO:

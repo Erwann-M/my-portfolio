@@ -11,11 +11,23 @@ import profile from '../../assets/icons/user.png';
 import profilePicture from '../../assets/img/pp.jpg';
 import onoff from '../../assets/icons/onoff.svg';
 
+// ----------- image --------------
+
+
 //---------component--------------------
 import Weather from '../Weather';
+import { useDispatch } from 'react-redux';
+import { unsetLogin } from '../../action';
+
 
 
 const Menu = () => {
+
+  const dispatch = useDispatch();
+
+  const handleClickOff = () => {
+    dispatch(unsetLogin());
+  };
   
   return(
     <div className="menu">
@@ -65,8 +77,8 @@ const Menu = () => {
         <div className="menu__application">
           <h2 className="menu__title">Applications</h2>
           <div className="menu__application__card">
-            <div className="menu__application__card--weather">
-              <Weather />
+            <div className="menu__application__card--random">
+              <img className="menu__application__card--random-image" src='https://picsum.photos/200/100' alt="" />
             </div>
           </div>
         </div>
@@ -78,7 +90,7 @@ const Menu = () => {
             <p className="menu__bottom__profile-title">Martin Erwann</p>
           </div>
 
-          <img className='menu__bottom__off' src={onoff} alt="Retour à la page d'accueil" />
+          <img className='menu__bottom__off' onClick={handleClickOff} src={onoff} alt="Retour à la page d'accueil" />
 
         </div>
       </div>
