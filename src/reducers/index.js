@@ -2,14 +2,13 @@
 |*-----------------Reducer (contain state)--------------------------*|
 |*==================================================================*/
 
-import { GET_DATE, GET_TIME, SAVE_WEATHER_INFO, SET_LOGIN, TOGGLE_MENU, UNSET_LOGIN } from "../action";
+import { GET_DATE, GET_TIME, SET_LOGIN, TOGGLE_MENU, UNSET_LOGIN } from "../action";
 
 const initialState = {
   loggedIn: false,
   time: "",
   date: "",
   menuToggled: false,
-  weatherInfo: [],
 };
 
 const reducer = (state = initialState, action = {}) => {
