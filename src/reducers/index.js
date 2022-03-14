@@ -2,13 +2,14 @@
 |*-----------------Reducer (contain state)--------------------------*|
 |*==================================================================*/
 
-import { GET_DATE, GET_TIME, SET_LOGIN, TOGGLE_MENU, UNSET_LOGIN } from "../action";
+import { GET_DATE, GET_TIME, SET_LOGIN, TOGGLE_MENU, TOGGLE_PROJECT_EXPLORER, UNSET_LOGIN } from "../action";
 
 const initialState = {
-  loggedIn: false,
+  loggedIn: true,
   time: "",
   date: "",
   menuToggled: false,
+  projectExplorerToggled: true,
 };
 
 const reducer = (state = initialState, action = {}) => {
@@ -39,6 +40,11 @@ const reducer = (state = initialState, action = {}) => {
         loggedIn: false,
         menuToggled: false,
       };
+      case TOGGLE_PROJECT_EXPLORER:
+        return {
+          ...state,
+          projectExplorerToggled: !state.projectExplorerToggled,
+        };
     default:
       return state;
   }

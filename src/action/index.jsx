@@ -30,23 +30,14 @@ export const toggleMenu = () => ({
 });
 
 
-export const GET_WEATHER_INFO = "GET_WEATHER_INFO";
-
-export const getWeatherInfo = () => ({
-  type: GET_WEATHER_INFO,
-});
-
-
-export const SAVE_WEATHER_INFO = "SAVE_WEATHER_INFO";
-
-export const saveWeatherInfo = (weatherInfo) => ({
-  type: SAVE_WEATHER_INFO,
-  weatherInfo,
-});
-
-
 export const UNSET_LOGIN = "UNSET_LOGIN";
 
 export const unsetLogin = () => ({
   type: UNSET_LOGIN,
+});
+
+export const TOGGLE_PROJECT_EXPLORER = "TOGGLE_PROJECT_EXPLORER";
+
+export const toggleProjectExplorer = () => ({
+  type: TOGGLE_PROJECT_EXPLORER,
 });

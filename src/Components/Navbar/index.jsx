@@ -14,15 +14,16 @@ import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 // local components ------------------------------------------------
-import { getTime, getDate, toggleMenu } from '../../action';
+import { getTime, getDate, toggleMenu, toggleProjectExplorer } from '../../action';
 import Menu from '../Menu';
 import Draggable from 'react-draggable';
+import ProjectExplorer from '../ProjectExplorer';
 
 const Navbar = () => {
 
   const dispatch = useDispatch();
 
-  const {date, time, menuToggled} = useSelector(state => state);
+  const {date, time, menuToggled, projectExplorerToggled} = useSelector(state => state);
 
   useEffect(
     () => {
@@ -47,7 +48,7 @@ const Navbar = () => {
   };
 
   const handleClickProject = () => {
-    alert('project clicked');
+    dispatch(toggleProjectExplorer());
   };
 
   const handleClickContact = () => {
@@ -86,7 +87,7 @@ const Navbar = () => {
               src={explorerIcon} 
               alt="Explorer mes projets" 
               title='Explorateur de projets' 
-              className='navbar__icon__list__img' 
+              className={'navbar__icon__list__img' + (projectExplorerToggled ? ' icon-active' : '')}
             />
           </li>
 
@@ -132,6 +133,7 @@ const Navbar = () => {
         </div>
       </div>
       {menuToggled && <Menu />}
+      {projectExplorerToggled && <ProjectExplorer />}
 
     </div>
   );
