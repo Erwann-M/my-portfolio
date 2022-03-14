@@ -15,7 +15,6 @@ import onoff from '../../assets/icons/onoff.svg';
 
 
 //---------component--------------------
-import Weather from '../Weather';
 import { useDispatch } from 'react-redux';
 import { unsetLogin } from '../../action';
 

@@ -34,17 +34,12 @@ const reducer = (state = initialState, action = {}) => {
         ...state,
         menuToggled: !state.menuToggled,
       };
-    case SAVE_WEATHER_INFO:
-      return {
-        ...state,
-        weatherInfo: action.weatherInfo,
-      }
     case UNSET_LOGIN:
       return {
         ...state,
         loggedIn: false,
         menuToggled: false,
-      }
+      };
     default:
       return state;
   }
