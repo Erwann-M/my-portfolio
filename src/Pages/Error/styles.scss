@@ -1,0 +1,44 @@
+@use "src/styles/vars";
+
+.error {
+  width: 100vw;
+  height: 100vh;
+  background-color: #1F66B2;
+  font-family: vars.$font-regular;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+
+  &__container {
+    width: 90%;
+    height: 65%;
+
+    &__logo {
+      font-size: 150px;
+      margin-bottom: 40px;
+    }
+
+    &__text {
+      font-size: 25px;
+      margin-bottom: 50px;
+    }
+
+    &__counter {
+      font-size: 25px;
+      margin-bottom: 40px;
+    }
+
+    &__name {
+      font-size: 17px;
+    }
+  }
+}
+
+@media (min-width:1024px) {
+  .error {
+    &__container {
+      width: 70%;
+    }
+  }
+}

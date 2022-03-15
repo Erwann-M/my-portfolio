@@ -2,7 +2,8 @@
 |*-----------------Reducer (contain state)--------------------------*|
 |*==================================================================*/
 
-import { GET_DATE, GET_TIME, SET_LOGIN, TOGGLE_MENU, TOGGLE_PROJECT_EXPLORER, UNSET_LOGIN } from "../action";
+import { Navigate } from "react-router";
+import { GET_DATE, GET_TIME, INCREMENT_ERROR_COUNTER, SET_LOGIN, TOGGLE_MENU, TOGGLE_PROJECT_EXPLORER, UNSET_LOGIN } from "../action";
 
 const initialState = {
   loggedIn: true,
@@ -10,6 +11,7 @@ const initialState = {
   date: "",
   menuToggled: false,
   projectExplorerToggled: true,
+  errorCounter: 0,
 };
 
 const reducer = (state = initialState, action = {}) => {
@@ -46,6 +48,11 @@ const reducer = (state = initialState, action = {}) => {
           projectExplorerToggled: !state.projectExplorerToggled,
           menuToggled: false,
         };
+      case INCREMENT_ERROR_COUNTER:
+        return {
+          ...state,
+          errorCounter: state.errorCounter < 100 ? state.errorCounter += 1 : <Navigate to="/" />,
+        }
     default:
       return state;
   }

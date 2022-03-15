@@ -116,6 +116,16 @@
 
     &__pin {
       width: 85%;
+
+      &__container {
+        border: 1px solid transparent;
+        transition: 0.6s ease-in-out;
+        &:hover {
+          background: #a0a0a049;
+          transition: 0.2s ease-in-out;
+          cursor: pointer;
+        }
+      }
     }
 
     &__application {

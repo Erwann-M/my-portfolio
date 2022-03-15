@@ -9,10 +9,15 @@ import arrowCurved from "../../assets/icons/arrow-curved.png";
 import { useDispatch } from 'react-redux';
 import { toggleProjectExplorer } from '../../action';
 import datas from '../../data/datas';
+import { NavLink } from 'react-router-dom';
 
 const ProjectExplorer = () => {
 
   const dispatch = useDispatch();
+
+  const handleClickProject = (e) => {
+    console.log(e);
+  }
 
   const handleClickClose = () => {
     dispatch(toggleProjectExplorer());
@@ -29,7 +34,7 @@ const ProjectExplorer = () => {
         <div className="project-explorer__title-bar__right">
           <img className="project-explorer__title-bar__right__icons" src={minimize} alt="" />
           <img className="project-explorer__title-bar__right__icons" src={maximize} alt="" />
-          <img onClick={handleClickClose} className="project-explorer__title-bar__right__icons" src={close} alt="" />
+          <img onClick={handleClickClose} className="project-explorer__title-bar__right__icons project-explorer__title-bar__right__icons--close" src={close} alt="" />
         </div>
       </div>
 
@@ -45,14 +50,14 @@ const ProjectExplorer = () => {
         </div>
         <div className="project-explorer__control-bar__search">
           <form action="">
-            <input type="text" />
+            <input className="project-explorer__control-bar__search--input" type="text" placeholder='Recherche' />
           </form>
         </div>
       </div>
 
       <div className="project-explorer__content">
         {datas.map((data) => (
-          <div className="project-explorer__content__card">
+          <div key={data.id} className="project-explorer__content__card">
             <img className="project-explorer__content__card__icon" src={data.icon} alt={data.title} />
             <p className="project-explorer__content__card__title">{data.title}</p>
           </div>

@@ -41,3 +41,9 @@ export const TOGGLE_PROJECT_EXPLORER = "TOGGLE_PROJECT_EXPLORER";
 export const toggleProjectExplorer = () => ({
   type: TOGGLE_PROJECT_EXPLORER,
 });
+
+export const INCREMENT_ERROR_COUNTER = "INCREMENT_ERROR_COUNTER";
+
+export const incrementErrorCounter = () => ({
+  type: INCREMENT_ERROR_COUNTER,
+});
