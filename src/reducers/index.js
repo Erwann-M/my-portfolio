@@ -12,6 +12,7 @@ const initialState = {
   menuToggled: false,
   projectExplorerToggled: true,
   errorCounter: 0,
+  currentProject: "",
 };
 
 const reducer = (state = initialState, action = {}) => {

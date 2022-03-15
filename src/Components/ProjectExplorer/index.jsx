@@ -9,15 +9,13 @@ import arrowCurved from "../../assets/icons/arrow-curved.png";
 import { useDispatch } from 'react-redux';
 import { toggleProjectExplorer } from '../../action';
 import datas from '../../data/datas';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useParams } from 'react-router-dom';
 
 const ProjectExplorer = () => {
 
-  const dispatch = useDispatch();
+  const eventId = useParams().slug;
 
-  const handleClickProject = (e) => {
-    console.log(e);
-  }
+  const dispatch = useDispatch();
 
   const handleClickClose = () => {
     dispatch(toggleProjectExplorer());
@@ -56,13 +54,30 @@ const ProjectExplorer = () => {
       </div>
 
       <div className="project-explorer__content">
-        {datas.map((data) => (
-          <div key={data.id} className="project-explorer__content__card">
-            <img className="project-explorer__content__card__icon" src={data.icon} alt={data.title} />
-            <p className="project-explorer__content__card__title">{data.title}</p>
+
+        {eventId ?
+
+          <div>
+            <img src={datas[eventId].icon} alt={datas[eventId].title} />
+            <h3>{datas[eventId].title}</h3>
+            <img src={datas[eventId].image} alt="" />
+            <p>{datas[eventId].description}</p>
+
           </div>
-        )
-        )}
+
+        : 
+        
+          datas.map((data) => (
+            <NavLink to={`/project/${data.id}`}>
+              <div key={data.id} className="project-explorer__content__card">
+                <img className="project-explorer__content__card__icon" src={data.icon} alt={data.title} />
+                <p className="project-explorer__content__card__title">{data.title}</p>
+              </div>
+            </NavLink>
+            )
+          )
+        }
+        
       </div>
     </div>
   );
