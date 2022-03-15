@@ -44,6 +44,7 @@ const reducer = (state = initialState, action = {}) => {
         return {
           ...state,
           projectExplorerToggled: !state.projectExplorerToggled,
+          menuToggled: false,
         };
     default:
       return state;

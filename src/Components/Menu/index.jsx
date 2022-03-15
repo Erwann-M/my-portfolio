@@ -16,13 +16,17 @@ import onoff from '../../assets/icons/onoff.svg';
 
 //---------component--------------------
 import { useDispatch } from 'react-redux';
-import { unsetLogin } from '../../action';
+import { toggleProjectExplorer, unsetLogin } from '../../action';
 
 
 
 const Menu = () => {
 
   const dispatch = useDispatch();
+
+  const handleClickProject = () => {
+    dispatch(toggleProjectExplorer());
+  }
 
   const handleClickOff = () => {
     dispatch(unsetLogin());
@@ -41,7 +45,7 @@ const Menu = () => {
             <p className='menu__pin__container-title'>Navigateur</p>
           </div>
 
-          <div className="menu__pin__container">
+          <div className="menu__pin__container" onClick={handleClickProject}>
             <img src={explorerIcon} alt="Mes projets" className="menu__pin__container-icon" />
             <p className='menu__pin__container-title'>Explorateur de projets</p>
           </div>

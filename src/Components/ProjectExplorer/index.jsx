@@ -35,12 +35,13 @@ const ProjectExplorer = () => {
 
       <div className="project-explorer__control-bar">
         <div className="project-explorer__control-bar__button">
-          <img src={arrowLeft} alt="Précédant" />
-          <img src={arrowRight} alt="Suivant" />
+          <img className="project-explorer__control-bar__button--arrow" src={arrowLeft} alt="Précédant" />
+          <img className="project-explorer__control-bar__button--arrow" src={arrowRight} alt="Suivant" />
         </div>
         <div className="project-explorer__control-bar__path">
-          <img src={icon} alt="Icone du dossier" />
-          <p>  &gt;  </p>
+          <img className="project-explorer__control-bar__path__icon" src={icon} alt="Icone du dossier" />
+          <p className="project-explorer__control-bar__path__name">Mes Projets <span>&gt;</span> </p>
+          <img className="project-explorer__control-bar__path__arrow" src={arrowCurved} alt="Recharger" />
         </div>
         <div className="project-explorer__control-bar__search">
           <form action="">
