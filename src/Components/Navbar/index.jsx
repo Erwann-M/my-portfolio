@@ -19,15 +19,16 @@ import Draggable from 'react-draggable';
 import { NavLink } from 'react-router-dom';
 
 // local components ------------------------------------------------
-import { getTime, getDate, toggleMenu, toggleProjectExplorer } from '../../action';
+import { getTime, getDate, toggleMenu, toggleProjectExplorer, toggleContact } from '../../action';
 import Menu from '../Menu';
 import ProjectExplorer from '../ProjectExplorer';
+import Contact from '../Contact';
 
 const Navbar = () => {
 
   const dispatch = useDispatch();
 
-  const {date, time, menuToggled, projectExplorerToggled} = useSelector(state => state);
+  const {date, time, menuToggled, projectExplorerToggled, contactToggled} = useSelector(state => state);
 
   useEffect(
     () => {
@@ -56,7 +57,7 @@ const Navbar = () => {
   };
 
   const handleClickContact = () => {
-    alert('contact clicked');
+    dispatch(toggleContact());
   };
 
   const handleClickTrash = () => {
@@ -97,14 +98,16 @@ const Navbar = () => {
             </li>
           </NavLink>
 
-          <li onClick={handleClickContact} className="navbar__icon__list__item" >
-            <img 
-              src={emailIcon} 
-              alt="Me contacter" 
-              className='navbar__icon__list__img' 
-              title='Me contacter' 
-            />
-          </li>
+          <NavLink to={"/"}>
+            <li onClick={handleClickContact} className="navbar__icon__list__item" >
+              <img 
+                src={emailIcon} 
+                alt="Me contacter" 
+                className={'navbar__icon__list__img' + (contactToggled ? ' icon-active' : '')}
+                title='Me contacter' 
+              />
+            </li>
+          </NavLink>
 
         </ul>
       </nav>
@@ -140,7 +143,7 @@ const Navbar = () => {
       </div>
       {menuToggled && <Menu />}
       {projectExplorerToggled && <ProjectExplorer />}
-
+      {contactToggled && <Contact />}
     </div>
   );
 };

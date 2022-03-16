@@ -16,7 +16,7 @@ import onoff from '../../assets/icons/onoff.svg';
 
 //---------component--------------------
 import { useDispatch } from 'react-redux';
-import { toggleProjectExplorer, unsetLogin } from '../../action';
+import { toggleProjectExplorer, unsetLogin, toggleContact } from '../../action';
 import { NavLink } from 'react-router-dom';
 
 
@@ -28,6 +28,10 @@ const Menu = () => {
   const handleClickProject = () => {
     dispatch(toggleProjectExplorer());
   }
+
+  const handleClickContact = () => {
+    dispatch(toggleContact());
+  };
 
   const handleClickOff = () => {
     dispatch(unsetLogin());
@@ -53,10 +57,12 @@ const Menu = () => {
             </div>
           </NavLink>
 
-          <div className="menu__pin__container">
-            <img src={emailIcon} alt="Me contacter" className="menu__pin__container-icon" />
-            <p className='menu__pin__container-title'>Contact</p>
-          </div>
+          <NavLink to={"/"} className="menu__pin-nav">
+            <div className="menu__pin__container" onClick={handleClickContact}>
+              <img src={emailIcon} alt="Me contacter" className="menu__pin__container-icon" />
+              <p className='menu__pin__container-title'>Contact</p>
+            </div>
+          </NavLink>
           
           <a href='https://www.linkedin.com/in/erwann-martin/' className="menu__pin__container">
             <img src={linkedin} alt="Mon profil linkedIn" className="menu__pin__container-icon" />

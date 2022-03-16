@@ -3,14 +3,15 @@
 |*==================================================================*/
 
 import { Navigate } from "react-router";
-import { GET_DATE, GET_TIME, INCREMENT_ERROR_COUNTER, SET_LOGIN, TOGGLE_MENU, TOGGLE_PROJECT_EXPLORER, UNSET_LOGIN } from "../action";
+import { GET_DATE, GET_TIME, INCREMENT_ERROR_COUNTER, SET_LOGIN, TOGGLE_CONTACT, TOGGLE_MENU, TOGGLE_PROJECT_EXPLORER, UNSET_LOGIN } from "../action";
 
 const initialState = {
-  loggedIn: false,
+  loggedIn: true,
   time: "",
   date: "",
   menuToggled: false,
   projectExplorerToggled: false,
+  contactToggled: true,
   errorCounter: 0,
 };
 
@@ -47,11 +48,19 @@ const reducer = (state = initialState, action = {}) => {
           ...state,
           projectExplorerToggled: !state.projectExplorerToggled,
           menuToggled: false,
+          contactToggled: false,
         };
       case INCREMENT_ERROR_COUNTER:
         return {
           ...state,
           errorCounter: state.errorCounter < 100 ? state.errorCounter += 1 : <Navigate to="/" />,
+        };
+      case TOGGLE_CONTACT:
+        return {
+          ...state,
+          contactToggled: !state.contactToggled,
+          menuToggled: false,
+          projectExplorerToggled: false,
         }
     default:
       return state;

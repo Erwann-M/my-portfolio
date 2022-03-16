@@ -47,3 +47,9 @@ export const INCREMENT_ERROR_COUNTER = "INCREMENT_ERROR_COUNTER";
 export const incrementErrorCounter = () => ({
   type: INCREMENT_ERROR_COUNTER,
 });
+
+export const TOGGLE_CONTACT = "TOGGLE_CONTACT";
+
+export const toggleContact = () => ({
+  type: TOGGLE_CONTACT,
+});

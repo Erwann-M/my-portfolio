@@ -1,0 +1,107 @@
+@use "src/styles/vars";
+
+.contact {
+  background-color: #191919;
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 85vh;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 14px 2px #000000; 
+  box-shadow: 0px 0px 14px 2px #000000;
+
+  &__title-bar {
+    background-color: #1B2125;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5%;
+    padding: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 1px solid rgb(65, 65, 65);
+
+    &__left {
+      display: flex;
+      align-items: center;
+      width: fit-content;
+
+      &__icon {
+        width: 30px;
+        height: 30px;
+      }
+
+      &__title {
+        color: rgb(194, 193, 193);
+        font-family: vars.$font-regular;
+        margin-left: 5px;
+      }
+    }
+
+    &__right {
+      display: flex;
+      justify-content: space-around;
+      width: 90px;
+
+      &__icons {
+        width: 15px;
+        height: 15px; 
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .contact {
+    width: 80vw;
+    height: 65vh;
+  }
+}
+
+@media (min-width:1080px) {
+  .contact {
+    width: 60vw;
+    top: 50%;
+    left: 55%;
+    animation: scale 0.3s ease-in-out;
+
+    &__title-bar {
+      &__left {
+        &__title {
+          cursor: default;
+        }
+      }
+      &__right {
+        width: 100px;
+        &__icons {
+          padding: 10px;
+          margin-right: 2px;
+          cursor: pointer;
+          &:hover {
+            background-color: rgb(86, 88, 88);
+          }
+
+          &--close {
+            border-top-right-radius: 5px;
+            &:hover {
+              background-color: red;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes scale {
+  from {
+    top: 60%;
+    left: 25%;
+    transform: scale(0) translate(-100%, 50%);
+  }
+  to {
+    transform: scale(1) translate(-50%, -50%);
+  }
+}
