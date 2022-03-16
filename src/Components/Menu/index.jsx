@@ -17,6 +17,7 @@ import onoff from '../../assets/icons/onoff.svg';
 //---------component--------------------
 import { useDispatch } from 'react-redux';
 import { toggleProjectExplorer, unsetLogin } from '../../action';
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -45,30 +46,32 @@ const Menu = () => {
             <p className='menu__pin__container-title'>Navigateur</p>
           </div>
 
-          <div className="menu__pin__container" onClick={handleClickProject}>
-            <img src={explorerIcon} alt="Mes projets" className="menu__pin__container-icon" />
-            <p className='menu__pin__container-title'>Explorateur de projets</p>
-          </div>
+          <NavLink to={"/"} className="menu__pin-nav">
+            <div className="menu__pin__container" onClick={handleClickProject}>
+              <img src={explorerIcon} alt="Mes projets" className="menu__pin__container-icon" />
+              <p className='menu__pin__container-title'>Explorateur de projets</p>
+            </div>
+          </NavLink>
 
           <div className="menu__pin__container">
             <img src={emailIcon} alt="Me contacter" className="menu__pin__container-icon" />
             <p className='menu__pin__container-title'>Contact</p>
           </div>
-
-          <div className="menu__pin__container">
+          
+          <a href='https://www.linkedin.com/in/erwann-martin/' className="menu__pin__container">
             <img src={linkedin} alt="Mon profil linkedIn" className="menu__pin__container-icon" />
             <p className='menu__pin__container-title'>LinkedIn</p>
-          </div>
-
-          <div className="menu__pin__container">
+          </a>
+        
+          <a href="https://twitter.com/ErwannMartin3" className="menu__pin__container">
             <img src={twitter} alt="Mon profil twitter" className="menu__pin__container-icon" />
             <p className='menu__pin__container-title'>Twitter</p>
-          </div>
+          </a>
 
-          <div className="menu__pin__container">
+          <a href='https://github.com/Erwann-M' className="menu__pin__container">
             <img src={github} alt="Mon profil github" className="menu__pin__container-icon" />
             <p className='menu__pin__container-title'>GitHub</p>
-          </div>
+          </a>
 
           <div className="menu__pin__container">
             <img src={profile} alt="À propos de moi" className="menu__pin__container-icon" />

@@ -1,4 +1,5 @@
 import './styles.scss';
+
 // images ----------------------------------------------------------
 import homeIcon from '../../assets/icons/windows.png';
 import chromeIcon from '../../assets/icons/chrome.png';
@@ -9,14 +10,17 @@ import wifi from '../../assets/icons/wifi.png';
 import sound from '../../assets/icons/sound.png';
 import battery from '../../assets/icons/battery.png';
 import trash from '../../assets/icons/Recycle-bin.png';
+
 // library ------------------------------------------------
 import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import Draggable from 'react-draggable';
+import { NavLink } from 'react-router-dom';
+
 // local components ------------------------------------------------
 import { getTime, getDate, toggleMenu, toggleProjectExplorer } from '../../action';
 import Menu from '../Menu';
-import Draggable from 'react-draggable';
 import ProjectExplorer from '../ProjectExplorer';
 
 const Navbar = () => {
@@ -82,14 +86,16 @@ const Navbar = () => {
             />
           </li>
 
-          <li onClick={handleClickProject} className="navbar__icon__list__item" >
-            <img 
-              src={explorerIcon} 
-              alt="Explorer mes projets" 
-              title='Explorateur de projets' 
-              className={'navbar__icon__list__img' + (projectExplorerToggled ? ' icon-active' : '')}
-            />
-          </li>
+          <NavLink to={"/"}>
+            <li onClick={handleClickProject} className="navbar__icon__list__item" >
+                <img 
+                  src={explorerIcon} 
+                  alt="Explorer mes projets" 
+                  title='Explorateur de projets' 
+                  className={'navbar__icon__list__img' + (projectExplorerToggled ? ' icon-active' : '')}
+                />
+            </li>
+          </NavLink>
 
           <li onClick={handleClickContact} className="navbar__icon__list__item" >
             <img 
