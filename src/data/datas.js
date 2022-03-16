@@ -4,7 +4,7 @@ import kaamelottIcon from "../assets/img/kaamelott-icon.png";
 import kaamelottImg from "../assets/img/kaamelott-image.png";
 
 const datas = [
-   {
+  {
     id: 0,
     title: "Blabla Quest",
     titleSlug: "blabla_quest",
