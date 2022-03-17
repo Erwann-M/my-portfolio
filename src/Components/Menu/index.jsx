@@ -15,13 +15,15 @@ import onoff from '../../assets/icons/onoff.svg';
 
 
 //---------component--------------------
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { toggleProjectExplorer, unsetLogin, toggleContact } from '../../action';
 import { NavLink } from 'react-router-dom';
 
 
 
 const Menu = () => {
+
+  const { menuToggled } = useSelector(state => state);
 
   const dispatch = useDispatch();
 
@@ -38,7 +40,7 @@ const Menu = () => {
   };
   
   return(
-    <div className="menu">
+    <div className={"menu " + (menuToggled && "active")}>
       <div className='menu--background'>
 
         <h2 className='menu__title'>Épinglé</h2>

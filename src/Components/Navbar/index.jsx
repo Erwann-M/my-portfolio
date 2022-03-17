@@ -141,7 +141,7 @@ const Navbar = () => {
 
         </div>
       </div>
-      {menuToggled && <Menu />}
+      <Menu />
       {projectExplorerToggled && <ProjectExplorer />}
       {contactToggled && <Contact />}
     </div>
