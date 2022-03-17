@@ -59,7 +59,7 @@ const Contact = () => {
           <div className={"contact__content__left__burger " + (burgerMenuToggled && "active")} onClick={handleClickburger}>
             <span></span>
           </div>
-          <NavLink to={"/"}>
+          <NavLink to={"/"} onClick={handleClickburger}>
             <div className={"contact__content__left__card " + (!currentMail && " active-card")}>
 
               <div className="contact__content__left__card__container">
@@ -72,7 +72,7 @@ const Contact = () => {
             </div>
           </NavLink>
 
-          <NavLink to={"/mail/2"}>
+          <NavLink to={"/mail/2"} onClick={handleClickburger}>
             <div className={"contact__content__left__card " + (currentMail === "2" && " active-card")}>
 
               <div className="contact__content__left__card__container">
@@ -85,7 +85,7 @@ const Contact = () => {
             </div>
           </NavLink>
 
-          <NavLink to={"/mail/3"}>
+          <NavLink to={"/mail/3"} onClick={handleClickburger}>
             <div className={"contact__content__left__card " + (currentMail === "3" && " active-card")}>
 
               <div className="contact__content__left__card__container">
@@ -93,12 +93,12 @@ const Contact = () => {
                 <p className="contact__content__left__card__name">Jean Titouplin</p>
               </div>
 
-              <p className="contact__content__left__card__object">Lorem ipsum dolor sit</p>
-              <p className="contact__content__left__card__hour">14H12</p>
+              <p className="contact__content__left__card__object">Coucou</p>
+              <p className="contact__content__left__card__hour">23H12</p>
             </div>
           </NavLink>
 
-          <NavLink to={"/mail/4"}>
+          <NavLink to={"/mail/4"} onClick={handleClickburger}>
             <div className={"contact__content__left__card " + (currentMail === "4" && " active-card")}>
 
               <div className="contact__content__left__card__container">
@@ -106,7 +106,7 @@ const Contact = () => {
                 <p className="contact__content__left__card__name">Rob Otique</p>
               </div>
 
-              <p className="contact__content__left__card__object">Lorem ipsum dolor sit</p>
+              <p className="contact__content__left__card__object">Salut papy</p>
               <p className="contact__content__left__card__hour">01H04</p>
             </div>
           </NavLink>

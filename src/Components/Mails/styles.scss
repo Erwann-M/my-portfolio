@@ -1,0 +1,31 @@
+@use "src/styles/vars";
+
+.mail {
+  color: white;
+  font-family: vars.$font-regular;
+  width: 100%;
+
+  &__profile-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    &__image {
+      width: 50px;
+      margin-right: 10px;
+    }
+
+    &__info {
+      &__date-time {
+        color: rgb(172, 172, 172);
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__object {
+    font-size: 20px;
+    font-family: vars.$font-medium;
+    margin-bottom: 20px;
+  }
+}

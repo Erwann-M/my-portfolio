@@ -176,6 +176,13 @@
       }
 
     }
+
+    &__right {
+      margin-left:20%;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      height: 100%;
+    }
   }
 }
 
@@ -183,10 +190,20 @@
   .contact {
     width: 80vw;
     height: 65vh;
+
+    &__content {
+      &__left {
+        width: 50%;
+      }
+      &__right {
+        margin-left: 15%;
+        margin-right: 10%;
+      }
+    }
   }
 }
 
-@media (min-width:1080px) {
+@media (min-width:1024px) {
   .contact {
     width: 60vw;
     top: 50%;
@@ -216,6 +233,26 @@
             }
           }
         }
+      }
+    }
+
+    &__content {
+      &__left {
+        width: 30%;
+
+        &__card {
+          transition: 0.5s ease-in-out;
+          margin-left: 10px;
+          &:hover {
+            background-color: #464646;
+            transition: 0.2s ease-in-out;
+          }
+        }
+      }
+      &__right {
+        margin-top: 30px;
+        margin-left: 15%;
+        margin-right: 10%;
       }
     }
   }
