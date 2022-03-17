@@ -11,13 +11,25 @@ import avatar3 from "../../assets/img/avatar3.png";
 import avatar4 from "../../assets/img/avatar4.png";
 
 //---------------------components -------------------------
-import { NavLink } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { toggleContact } from '../../action';
+import { NavLink, useParams } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleBurgerMenu, toggleContact } from '../../action';
+import MailAlex from '../Mails/MailAlex';
+import MailJamie from '../Mails/MailJamie';
+import MailJean from '../Mails/MailJean';
+import MailRob from '../Mails/MailRob';
 
 const Contact = () => {
+
+  const currentMail = useParams().slug;
+
+  const {burgerMenuToggled} = useSelector(state => state);
   
   const dispatch = useDispatch();
+
+  const handleClickburger = () => {
+    dispatch(toggleBurgerMenu());
+  }
 
   const handleClickClose = () => {
     dispatch(toggleContact());
@@ -39,38 +51,72 @@ const Contact = () => {
           </NavLink>
         </div>
       </div>
+
       <div className="contact__content">
 
-        <div className="contact__content__left">
-          <h2>Boite de reception</h2>
-          <div className="contact__content__left__card">
-            <img className="contact__content__left__card__image" src={avatar1} alt="" />
-            <p className="contact__content__left__card__name">Jamie Mescontact</p>
-            <p className="contact__content__left__card__object">Réponse à ta demande</p>
-            <p className="contact__content__left__card__hour">08H35</p>
+        <div className={"contact__content__left " + (burgerMenuToggled && "active")}>
+          <h2 className="contact__content__left__title">Boite de reception</h2>
+          <div className={"contact__content__left__burger " + (burgerMenuToggled && "active")} onClick={handleClickburger}>
+            <span></span>
           </div>
-          <div className="contact__content__left__card">
-            <img className="contact__content__left__card__image" src={avatar4} alt="" />
-            <p className="contact__content__left__card__name">Alex Ception</p>
-            <p className="contact__content__left__card__object">Mission pour toi</p>
-            <p className="contact__content__left__card__hour">18H26</p>
-          </div>
-          <div className="contact__content__left__card">
-            <img className="contact__content__left__card__image" src={avatar3} alt="" />
-            <p className="contact__content__left__card__name">Jean Titouplin</p>
-            <p className="contact__content__left__card__object">Lorem ipsum dolor sit</p>
-            <p className="contact__content__left__card__hour">14H12</p>
-          </div>
-          <div className="contact__content__left__card">
-            <img className="contact__content__left__card__image" src={avatar2} alt="" />
-            <p className="contact__content__left__card__name">Rob Otique</p>
-            <p className="contact__content__left__card__object">Lorem ipsum dolor sit</p>
-            <p className="contact__content__left__card__hour">01H04</p>
-          </div>
+          <NavLink to={"/"}>
+            <div className={"contact__content__left__card " + (!currentMail && " active-card")}>
+
+              <div className="contact__content__left__card__container">
+                <img className="contact__content__left__card__image" src={avatar1} alt="" />
+                <p className="contact__content__left__card__name">Jamie Mescontact</p>
+              </div>
+
+              <p className="contact__content__left__card__object">Réponse à ta demande</p>
+              <p className="contact__content__left__card__hour">08H35</p>
+            </div>
+          </NavLink>
+
+          <NavLink to={"/mail/2"}>
+            <div className={"contact__content__left__card " + (currentMail === "2" && " active-card")}>
+
+              <div className="contact__content__left__card__container">
+                <img className="contact__content__left__card__image" src={avatar4} alt="" />
+                <p className="contact__content__left__card__name">Alex Ception</p>
+              </div>
+
+              <p className="contact__content__left__card__object">Mission pour toi</p>
+              <p className="contact__content__left__card__hour">18H26</p>
+            </div>
+          </NavLink>
+
+          <NavLink to={"/mail/3"}>
+            <div className={"contact__content__left__card " + (currentMail === "3" && " active-card")}>
+
+              <div className="contact__content__left__card__container">
+                <img className="contact__content__left__card__image" src={avatar3} alt="" />
+                <p className="contact__content__left__card__name">Jean Titouplin</p>
+              </div>
+
+              <p className="contact__content__left__card__object">Lorem ipsum dolor sit</p>
+              <p className="contact__content__left__card__hour">14H12</p>
+            </div>
+          </NavLink>
+
+          <NavLink to={"/mail/4"}>
+            <div className={"contact__content__left__card " + (currentMail === "4" && " active-card")}>
+
+              <div className="contact__content__left__card__container">
+                <img className="contact__content__left__card__image" src={avatar2} alt="" />
+                <p className="contact__content__left__card__name">Rob Otique</p>
+              </div>
+
+              <p className="contact__content__left__card__object">Lorem ipsum dolor sit</p>
+              <p className="contact__content__left__card__hour">01H04</p>
+            </div>
+          </NavLink>
         </div>
 
         <div className="contact__content__right">
-
+          {!currentMail && <MailJamie />}
+          {currentMail === "2" && <MailAlex />}
+          {currentMail === "3" && <MailJean />}
+          {currentMail === "4" && <MailRob />}
         </div>
 
       </div>

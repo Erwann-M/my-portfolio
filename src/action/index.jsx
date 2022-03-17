@@ -53,3 +53,9 @@ export const TOGGLE_CONTACT = "TOGGLE_CONTACT";
 export const toggleContact = () => ({
   type: TOGGLE_CONTACT,
 });
+
+export const TOGGLE_BURGER_MENU = "TOGGLE_BURGER_MENU";
+
+export const toggleBurgerMenu = () => ({
+  type: TOGGLE_BURGER_MENU,
+});

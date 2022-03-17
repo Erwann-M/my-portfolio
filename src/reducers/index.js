@@ -3,7 +3,7 @@
 |*==================================================================*/
 
 import { Navigate } from "react-router";
-import { GET_DATE, GET_TIME, INCREMENT_ERROR_COUNTER, SET_LOGIN, TOGGLE_CONTACT, TOGGLE_MENU, TOGGLE_PROJECT_EXPLORER, UNSET_LOGIN } from "../action";
+import { GET_DATE, GET_TIME, INCREMENT_ERROR_COUNTER, SET_LOGIN, TOGGLE_BURGER_MENU, TOGGLE_CONTACT, TOGGLE_MENU, TOGGLE_PROJECT_EXPLORER, UNSET_LOGIN } from "../action";
 
 const initialState = {
   loggedIn: true,
@@ -13,6 +13,7 @@ const initialState = {
   projectExplorerToggled: false,
   contactToggled: true,
   errorCounter: 0,
+  burgerMenuToggled: false,
 };
 
 const reducer = (state = initialState, action = {}) => {
@@ -61,6 +62,11 @@ const reducer = (state = initialState, action = {}) => {
           contactToggled: !state.contactToggled,
           menuToggled: false,
           projectExplorerToggled: false,
+        };
+      case TOGGLE_BURGER_MENU:
+        return {
+          ...state,
+          burgerMenuToggled: !state.burgerMenuToggled,
         }
     default:
       return state;
