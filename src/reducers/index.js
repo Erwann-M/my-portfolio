@@ -6,12 +6,12 @@ import { Navigate } from "react-router";
 import {GET_DATE, GET_TIME, INCREMENT_ERROR_COUNTER, SET_LOGIN, TOGGLE_BURGER_MENU, TOGGLE_CONTACT, TOGGLE_MENU, TOGGLE_PROJECT_EXPLORER, UNSET_LOGIN } from "../action";
 
 const initialState = {
-  loggedIn: true,
+  loggedIn: false,
   time: "",
   date: "",
   menuToggled: false,
   projectExplorerToggled: false,
-  contactToggled: true,
+  contactToggled: false,
   errorCounter: 0,
   burgerMenuToggled: false,
 };
