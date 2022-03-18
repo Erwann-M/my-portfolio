@@ -1,0 +1,26 @@
+@use "src/styles/vars";
+
+.hobby {
+  display: none;
+  &.active {
+    display: block;
+    color: aliceblue;
+    background-color: #2f373d;
+    animation: toggleDetails 0.5s ease-in-out;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+}
+
+@keyframes toggleDetails {
+  from {
+    opacity: 0;
+    transform: translateY(-40%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

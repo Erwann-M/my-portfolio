@@ -6,24 +6,55 @@ import icon from "../../assets/icons/user.png";
 import profilePicture from "../../assets/img/pp.jpg";
 import aboutMe from "../../assets/icons/aboutme.png";
 import hobby from "../../assets/icons/hobby.png";
-import student from "../../assets/icons/student.png";
+import study from "../../assets/icons/student.png";
 import tech from "../../assets/icons/tech.png";
 import work from "../../assets/icons/work.png";
-import arrow from "../../assets/icons/arrow-up.png";
+import arrow from "../../assets/icons/arrow-down.png";
 
 //---------------------components -------------------------
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import { toggleAbout } from '../../action';
+import AboutMe from "./AboutCardsDetails/AboutMe";
+import Hobby from "./AboutCardsDetails/Hobby";
+import { toggleAbout, toggleAboutMe, toggleTech, toggleStudy, toggleWork, toggleHobby } from '../../action';
 import './styles.scss';
+import Study from "./AboutCardsDetails/Study";
+import Tech from "./AboutCardsDetails/Tech";
+import Work from "./AboutCardsDetails/Work";
 
 const About = () => {
+
+  const { aboutMeToggled, techToggled, studyToggled, workToggled, hobbyToggled } = useSelector(state => state);
 
   const dispatch = useDispatch();
 
   const handleClickClose = () => {
     dispatch(toggleAbout());
   }
+
+  //============handle click of cards======================
+
+  const handleClickAboutMe = () => {
+    dispatch(toggleAboutMe());
+  }
+
+  const handleClickTech = () => {
+    dispatch(toggleTech());
+  }
+
+  const handleClickStudy = () => {
+    dispatch(toggleStudy());
+  }
+
+  const handleClickWork = () => {
+    dispatch(toggleWork());
+  }
+
+  const handleClickHobby = () => {
+    dispatch(toggleHobby());
+  }
+
+  //=======================================================
 
   return (
     <div className="about">
@@ -61,45 +92,75 @@ const About = () => {
 
         {/*-------------------------Start cards-------------------------*/}
 
+        <h3 className="about__content__section-title">Informations générales</h3>
 
-        <div className="about__content__card">
-          <div className="about__content__card__label">
-            <img src={aboutMe} alt="" className="about__content__card__label__image" />
-            <p className="about__content__card__label__title">À propos de moi</p>
+        <div className="hidden-container">
+          <div className="about__content__card" onClick={handleClickAboutMe}>
+            <div className="about__content__card__label">
+              <img src={aboutMe} alt="" className="about__content__card__label__image" />
+              <p className="about__content__card__label__title">À propos de moi</p>
+            </div>
+            <img className={"about__content__card__arrow " + (aboutMeToggled && "active")} src={arrow} alt="" />
           </div>
-          <img className="about__content__card__arrow" src={arrow} alt="" />
+          <div className="about__content__detail">
+            <AboutMe />
+          </div>
         </div>
 
-        <div className="about__content__card">
-          <div className="about__content__card__label">
-            <img src={tech} alt="" className="about__content__card__label__image" />
-            <p className="about__content__card__label__title">Ma stack</p>
+        <div className="hidden-container">
+          <div className="about__content__card" onClick={handleClickTech}>
+            <div className="about__content__card__label">
+              <img src={tech} alt="" className="about__content__card__label__image" />
+              <p className="about__content__card__label__title">Ma stack</p>
+            </div>
+            <img className={"about__content__card__arrow " + (techToggled && "active")} src={arrow} alt="" />
           </div>
-          <img className="about__content__card__arrow" src={arrow} alt="" />
+          <div className="about__content__detail">
+            <Tech />
+          </div>
         </div>
 
-        <div className="about__content__card">
-          <div className="about__content__card__label">
-            <img src={student} alt="" className="about__content__card__label__image" />
-            <p className="about__content__card__label__title">Formations et études</p>
+        <h3 className="about__content__section-title">Travail et Études</h3>
+
+        <div className="hidden-container">
+          <div className="about__content__card" onClick={handleClickStudy}>
+            <div className="about__content__card__label">
+              <img src={study} alt="" className="about__content__card__label__image" />
+              <p className="about__content__card__label__title">Formations et études</p>
+            </div>
+            <img className={"about__content__card__arrow " + (studyToggled && "active")} src={arrow} alt="" />
           </div>
-          <img className="about__content__card__arrow" src={arrow} alt="" />
+          <div className="about__content__detail">
+            <Study />
+          </div>
         </div>
 
-        <div className="about__content__card">
-          <div className="about__content__card__label">
-            <img src={work} alt="" className="about__content__card__label__image" />
-            <p className="about__content__card__label__title">Expériences professionnelles</p>
+        <div className="hidden-container">
+          <div className="about__content__card" onClick={handleClickWork}>
+            <div className="about__content__card__label">
+              <img src={work} alt="" className="about__content__card__label__image" />
+              <p className="about__content__card__label__title">Expériences professionnelles</p>
+            </div>
+            <img className={"about__content__card__arrow " + (workToggled && "active")} src={arrow} alt="" />
           </div>
-          <img className="about__content__card__arrow" src={arrow} alt="" />
+          <div className="about__content__detail">
+            <Work />
+          </div>
         </div>
 
-        <div className="about__content__card">
-          <div className="about__content__card__label">
-            <img src={hobby} alt="" className="about__content__card__label__image" />
-            <p className="about__content__card__label__title">Mes hobby</p>
+        <h3 className="about__content__section-title">Divers</h3>
+
+        <div className="hidden-container">
+          <div className="about__content__card" onClick={handleClickHobby}>
+            <div className="about__content__card__label">
+              <img src={hobby} alt="" className="about__content__card__label__image" />
+              <p className="about__content__card__label__title">Mes hobby</p>
+            </div>
+            <img className={"about__content__card__arrow " + (hobbyToggled && "active")} src={arrow} alt="" />
           </div>
-          <img className="about__content__card__arrow" src={arrow} alt="" />
+          <div className="about__content__detail">
+            <Hobby />
+          </div>
         </div>
 
         {/*-------------------------End card-------------------------*/}

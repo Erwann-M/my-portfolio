@@ -1,0 +1,46 @@
+@use "src/styles/vars";
+
+.tech {
+  display: none;
+  &.active {
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+    background-color: #2f373d;
+    animation: toggleDetails 0.5s ease-in-out;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  &__title {
+    font-family: vars.$font-regular;
+    font-size: 25px;
+    margin-top: 15px;
+  }
+
+  &__card {
+    display: flex;
+    align-items: center;
+
+    &__image {
+      margin-right: 10px;
+    }
+
+    &__text {
+      font-family: vars.$font-regular;
+    }
+  }
+}
+
+@keyframes toggleDetails {
+  from {
+    opacity: 0;
+    transform: translateY(-40%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

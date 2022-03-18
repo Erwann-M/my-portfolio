@@ -65,3 +65,43 @@ export const TOGGLE_ABOUT = "TOGGLE_ABOUT";
 export const toggleAbout = () => ({
   type: TOGGLE_ABOUT,
 });
+
+//============handle click of cards======================
+
+export const TOGGLE_ABOUT_ME = "TOGGLE_ABOUT_ME";
+
+export const toggleAboutMe = () => ({
+  type: TOGGLE_ABOUT_ME,
+});
+
+export const TOGGLE_TECH = "TOGGLE_TECH";
+
+export const toggleTech = () => ({
+  type: TOGGLE_TECH,
+});
+
+export const TOGGLE_STUDY = "TOGGLE_STUDY";
+
+export const toggleStudy = () => ({
+  type: TOGGLE_STUDY,
+});
+
+export const TOGGLE_WORK = "TOGGLE_WORK";
+
+export const toggleWork = () => ({
+  type: TOGGLE_WORK,
+});
+
+export const TOGGLE_HOBBY = "TOGGLE_HOBBY";
+
+export const toggleHobby = () => ({
+  type: TOGGLE_HOBBY,
+});
+
+//========================================================
+
+export const TOGGLE_EXPERIENCES = "TOGGLE_EXPERIENCES";
+
+export const toggleExperiences = () => ({
+  type: TOGGLE_EXPERIENCES,
+});

@@ -3,18 +3,28 @@
 |*==================================================================*/
 
 import { Navigate } from "react-router";
-import {GET_DATE, GET_TIME, INCREMENT_ERROR_COUNTER, SET_LOGIN, TOGGLE_ABOUT, TOGGLE_BURGER_MENU, TOGGLE_CONTACT, TOGGLE_MENU, TOGGLE_PROJECT_EXPLORER, UNSET_LOGIN } from "../action";
+import {GET_DATE, GET_TIME, INCREMENT_ERROR_COUNTER, SET_LOGIN, TOGGLE_ABOUT, TOGGLE_ABOUT_ME, TOGGLE_BURGER_MENU, TOGGLE_CONTACT, TOGGLE_EXPERIENCES, TOGGLE_HOBBY, TOGGLE_MENU, TOGGLE_PROJECT_EXPLORER, TOGGLE_STUDY, TOGGLE_TECH, TOGGLE_WORK, UNSET_LOGIN } from "../action";
 
 const initialState = {
   loggedIn: true,
   time: "",
   date: "",
+
   menuToggled: false,
   projectExplorerToggled: false,
   contactToggled: false,
-  aboutToggled: true,
-  errorCounter: 0,
   burgerMenuToggled: false,
+  aboutToggled: true,
+
+  errorCounter: 0,
+
+  aboutMeToggled: false,
+  techToggled: false,
+  studyToggled: false,
+  workToggled: false,
+  hobbyToggled: false,
+
+  experiencesToggled: false,
 };
 
 const reducer = (state = initialState, action = {}) => {
@@ -78,6 +88,41 @@ const reducer = (state = initialState, action = {}) => {
           menuToggled: false,
           projectExplorerToggled: false,
           contactToggled: false,
+          aboutMeToggled: false,
+          techToggled: false,
+          studyToggled: false,
+          workToggled: false,
+          hobbyToggled: false,
+        };
+      case TOGGLE_ABOUT_ME:
+        return {
+          ...state,
+          aboutMeToggled: !state.aboutMeToggled,
+        };
+      case TOGGLE_TECH:
+        return {
+          ...state,
+          techToggled: !state.techToggled,
+        };
+      case TOGGLE_STUDY:
+        return {
+          ...state,
+          studyToggled: !state.studyToggled,
+        };
+      case TOGGLE_WORK:
+        return {
+          ...state,
+          workToggled: !state.workToggled,
+        };
+      case TOGGLE_HOBBY:
+        return {
+          ...state,
+          hobbyToggled: !state.hobbyToggled,
+        };
+      case TOGGLE_EXPERIENCES:
+        return {
+          ...state,
+          experiencesToggled: !state.experiencesToggled,
         }
     default:
       return state;
