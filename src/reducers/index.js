@@ -3,15 +3,16 @@
 |*==================================================================*/
 
 import { Navigate } from "react-router";
-import {GET_DATE, GET_TIME, INCREMENT_ERROR_COUNTER, SET_LOGIN, TOGGLE_BURGER_MENU, TOGGLE_CONTACT, TOGGLE_MENU, TOGGLE_PROJECT_EXPLORER, UNSET_LOGIN } from "../action";
+import {GET_DATE, GET_TIME, INCREMENT_ERROR_COUNTER, SET_LOGIN, TOGGLE_ABOUT, TOGGLE_BURGER_MENU, TOGGLE_CONTACT, TOGGLE_MENU, TOGGLE_PROJECT_EXPLORER, UNSET_LOGIN } from "../action";
 
 const initialState = {
-  loggedIn: false,
+  loggedIn: true,
   time: "",
   date: "",
   menuToggled: false,
   projectExplorerToggled: false,
   contactToggled: false,
+  aboutToggled: true,
   errorCounter: 0,
   burgerMenuToggled: false,
 };
@@ -50,6 +51,7 @@ const reducer = (state = initialState, action = {}) => {
           projectExplorerToggled: !state.projectExplorerToggled,
           menuToggled: false,
           contactToggled: false,
+          aboutToggled:false,
         };
       case INCREMENT_ERROR_COUNTER:
         return {
@@ -62,12 +64,21 @@ const reducer = (state = initialState, action = {}) => {
           contactToggled: !state.contactToggled,
           menuToggled: false,
           projectExplorerToggled: false,
+          aboutToggled:false,
         };
       case TOGGLE_BURGER_MENU:
         return {
           ...state,
           burgerMenuToggled: !state.burgerMenuToggled,
         };
+      case TOGGLE_ABOUT:
+        return {
+          ...state,
+          aboutToggled: !state.aboutToggled,
+          menuToggled: false,
+          projectExplorerToggled: false,
+          contactToggled: false,
+        }
     default:
       return state;
   }

@@ -16,7 +16,7 @@ import onoff from '../../assets/icons/onoff.svg';
 
 //---------component--------------------
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleProjectExplorer, unsetLogin, toggleContact } from '../../action';
+import { toggleProjectExplorer, unsetLogin, toggleContact, toggleAbout } from '../../action';
 import { NavLink } from 'react-router-dom';
 
 
@@ -34,6 +34,10 @@ const Menu = () => {
   const handleClickContact = () => {
     dispatch(toggleContact());
   };
+
+  const handleClickAbout = () => {
+    dispatch(toggleAbout());
+  }
 
   const handleClickOff = () => {
     dispatch(unsetLogin());
@@ -81,10 +85,12 @@ const Menu = () => {
             <p className='menu__pin__container-title'>GitHub</p>
           </a>
 
-          <div className="menu__pin__container">
-            <img src={profile} alt="À propos de moi" className="menu__pin__container-icon" />
-            <p className='menu__pin__container-title'>À propos</p>
-          </div>
+          <NavLink to={"/"} className="menu__pin-nav">
+            <div className="menu__pin__container" onClick={handleClickAbout}>
+              <img src={profile} alt="À propos de moi" className="menu__pin__container-icon" />
+              <p className='menu__pin__container-title'>Mon profil</p>
+            </div>
+          </NavLink>
 
         </div>
 
@@ -99,10 +105,13 @@ const Menu = () => {
 
         <div className="menu__bottom">
 
-          <div className="menu__bottom__profile">
-            <img className="menu__bottom__profile-image" src={profilePicture} alt="À propos de moi" />
-            <p className="menu__bottom__profile-title">Martin Erwann</p>
-          </div>
+          <NavLink to={"/"} className="menu__pin-nav">
+            <div className="menu__bottom__profile" onClick={handleClickAbout}>
+              <img className="menu__bottom__profile-image" src={profilePicture} alt="À propos de moi" />
+              <p className="menu__bottom__profile-title">Martin Erwann</p>
+            </div>
+
+          </NavLink>
 
           <img className='menu__bottom__off' onClick={handleClickOff} src={onoff} alt="Retour à la page d'accueil" />
 

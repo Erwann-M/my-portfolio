@@ -5,6 +5,7 @@ import homeIcon from '../../assets/icons/windows.png';
 import chromeIcon from '../../assets/icons/chrome.png';
 import explorerIcon from '../../assets/icons/explorer.png';
 import emailIcon from '../../assets/icons/gmail.png';
+import aboutIcon from '../../assets/icons/user.png';
 import arrowUp from '../../assets/icons/arrow-up.png';
 import wifi from '../../assets/icons/wifi.png';
 import sound from '../../assets/icons/sound.png';
@@ -19,16 +20,17 @@ import Draggable from 'react-draggable';
 import { NavLink } from 'react-router-dom';
 
 // local components ------------------------------------------------
-import { getTime, getDate, toggleMenu, toggleProjectExplorer, toggleContact } from '../../action';
+import { getTime, getDate, toggleMenu, toggleProjectExplorer, toggleContact, toggleAbout } from '../../action';
 import Menu from '../Menu';
 import ProjectExplorer from '../ProjectExplorer';
 import Contact from '../Contact';
+import About from '../About';
 
 const Navbar = () => {
 
   const dispatch = useDispatch();
 
-  const {date, time, menuToggled, projectExplorerToggled, contactToggled} = useSelector(state => state);
+  const {date, time, menuToggled, projectExplorerToggled, contactToggled, aboutToggled} = useSelector(state => state);
 
   useEffect(
     () => {
@@ -59,6 +61,11 @@ const Navbar = () => {
   const handleClickContact = () => {
     dispatch(toggleContact());
   };
+
+  
+  const handleClickAbout = () => {
+    dispatch(toggleAbout());
+  }
 
   const handleClickTrash = () => {
     alert('ok c\'est bon');
@@ -109,6 +116,17 @@ const Navbar = () => {
             </li>
           </NavLink>
 
+          <NavLink to={"/"}>
+            <li onClick={handleClickAbout} className="navbar__icon__list__item" >
+              <img 
+                src={aboutIcon} 
+                alt="Mon profil" 
+                className={'navbar__icon__list__img' + (aboutToggled ? ' icon-active' : '')}
+                title='Mon profil' 
+              />
+            </li>
+          </NavLink>
+
         </ul>
       </nav>
 
@@ -144,6 +162,7 @@ const Navbar = () => {
       <Menu />
       {projectExplorerToggled && <ProjectExplorer />}
       {contactToggled && <Contact />}
+      {aboutToggled && <About />}
     </div>
   );
 };

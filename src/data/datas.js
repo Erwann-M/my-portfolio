@@ -22,7 +22,7 @@ const datas = [
     icon: kaamelottIcon,
     link: "https://kaamelott.erwann-martin.fr/",
     githubLink: "https://github.com/Erwann-M/kaamelott-fan-page",
-    description: "lorem ipsum",
+    description: "Ce petit site a été réalisé avant ma formation chez O'clock. C'est un tout petit projet pour m'exercer",
   }
 ]
 
