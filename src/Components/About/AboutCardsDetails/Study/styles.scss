@@ -28,6 +28,20 @@
   }
 }
 
+@media (min-width: 768px) {
+  .study {
+    &.active {
+      padding: 10px 30px;
+    }
+
+    &__card {
+      &__text {
+        font-size: 17px;
+      }
+    }
+  }
+}
+
 @keyframes toggleDetails {
   from {
     opacity: 0;

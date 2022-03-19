@@ -13,7 +13,7 @@ import avatar4 from "../../assets/img/avatar4.png";
 //---------------------components -------------------------
 import { NavLink, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleBurgerMenu, toggleContact } from '../../action';
+import { toggleBurgerMenu, toggleContact, toggleMaximize } from '../../action';
 import MailAlex from '../Mails/MailAlex';
 import MailJamie from '../Mails/MailJamie';
 import MailJean from '../Mails/MailJean';
@@ -23,7 +23,7 @@ const Contact = () => {
 
   const currentMail = useParams().slug;
 
-  const {burgerMenuToggled} = useSelector(state => state);
+  const {burgerMenuToggled, maximizeToggled} = useSelector(state => state);
   
   const dispatch = useDispatch();
 
@@ -35,8 +35,12 @@ const Contact = () => {
     dispatch(toggleContact());
   }
 
+  const handleClickMaximize = () => {
+    dispatch(toggleMaximize());
+  }
+
   return (
-    <div className="contact">
+    <div className={"contact " + (maximizeToggled && "active")}>
 
       <div className="contact__title-bar">
         <div className="contact__title-bar__left">
@@ -45,7 +49,7 @@ const Contact = () => {
         </div>
         <div className="contact__title-bar__right">
           <img className="contact__title-bar__right__icons" src={minimize} alt="" />
-          <img className="contact__title-bar__right__icons" src={maximize} alt="" />
+          <img className="contact__title-bar__right__icons" src={maximize} alt="" onClick={handleClickMaximize} />
           <NavLink to={"/"}>
             <img onClick={handleClickClose} className="contact__title-bar__right__icons contact__title-bar__right__icons--close" src={close} alt="" />
           </NavLink>

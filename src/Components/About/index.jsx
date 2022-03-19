@@ -16,7 +16,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import AboutMe from "./AboutCardsDetails/AboutMe";
 import Hobby from "./AboutCardsDetails/Hobby";
-import { toggleAbout, toggleAboutMe, toggleTech, toggleStudy, toggleWork, toggleHobby } from '../../action';
+import { toggleAbout, toggleAboutMe, toggleTech, toggleStudy, toggleWork, toggleHobby, toggleMaximize } from '../../action';
 import './styles.scss';
 import Study from "./AboutCardsDetails/Study";
 import Tech from "./AboutCardsDetails/Tech";
@@ -24,12 +24,16 @@ import Work from "./AboutCardsDetails/Work";
 
 const About = () => {
 
-  const { aboutMeToggled, techToggled, studyToggled, workToggled, hobbyToggled } = useSelector(state => state);
+  const { aboutMeToggled, techToggled, studyToggled, workToggled, hobbyToggled, maximizeToggled } = useSelector(state => state);
 
   const dispatch = useDispatch();
 
   const handleClickClose = () => {
     dispatch(toggleAbout());
+  }
+
+  const handleClickMaximize = () => {
+    dispatch(toggleMaximize());
   }
 
   //============handle click of cards======================
@@ -57,7 +61,7 @@ const About = () => {
   //=======================================================
 
   return (
-    <div className="about">
+    <div className={"about " + (maximizeToggled && "active")}>
       {/* title bar with title and 3 buttons (minimize, maximize & close) */}
       <div className="about__title-bar">
         <div className="about__title-bar__left">
@@ -66,7 +70,7 @@ const About = () => {
         </div>
         <div className="about__title-bar__right">
           <img className="about__title-bar__right__icons" src={minimize} alt="" />
-          <img className="about__title-bar__right__icons" src={maximize} alt="" />
+          <img className="about__title-bar__right__icons" src={maximize} alt="" onClick={handleClickMaximize} />
           <NavLink to={"/"}>
             <img onClick={handleClickClose} className="about__title-bar__right__icons about__title-bar__right__icons--close" src={close} alt="" />
           </NavLink>
@@ -94,8 +98,9 @@ const About = () => {
 
         <h3 className="about__content__section-title">Informations générales</h3>
 
+        {/* "hidden-container" is for hidden details div when appearing animation  */}
         <div className="hidden-container">
-          <div className="about__content__card" onClick={handleClickAboutMe}>
+          <div className={"about__content__card " + (aboutMeToggled && "active")} onClick={handleClickAboutMe}>
             <div className="about__content__card__label">
               <img src={aboutMe} alt="" className="about__content__card__label__image" />
               <p className="about__content__card__label__title">À propos de moi</p>
@@ -108,7 +113,7 @@ const About = () => {
         </div>
 
         <div className="hidden-container">
-          <div className="about__content__card" onClick={handleClickTech}>
+          <div className={"about__content__card " + (techToggled && "active")} onClick={handleClickTech}>
             <div className="about__content__card__label">
               <img src={tech} alt="" className="about__content__card__label__image" />
               <p className="about__content__card__label__title">Ma stack</p>
@@ -123,7 +128,7 @@ const About = () => {
         <h3 className="about__content__section-title">Travail et Études</h3>
 
         <div className="hidden-container">
-          <div className="about__content__card" onClick={handleClickStudy}>
+          <div className={"about__content__card " + (studyToggled && "active")} onClick={handleClickStudy}>
             <div className="about__content__card__label">
               <img src={study} alt="" className="about__content__card__label__image" />
               <p className="about__content__card__label__title">Formations et études</p>
@@ -136,7 +141,7 @@ const About = () => {
         </div>
 
         <div className="hidden-container">
-          <div className="about__content__card" onClick={handleClickWork}>
+          <div className={"about__content__card " + (workToggled && "active")} onClick={handleClickWork}>
             <div className="about__content__card__label">
               <img src={work} alt="" className="about__content__card__label__image" />
               <p className="about__content__card__label__title">Expériences professionnelles</p>
@@ -151,7 +156,7 @@ const About = () => {
         <h3 className="about__content__section-title">Divers</h3>
 
         <div className="hidden-container">
-          <div className="about__content__card" onClick={handleClickHobby}>
+          <div className={"about__content__card " + (hobbyToggled && "active")} onClick={handleClickHobby}>
             <div className="about__content__card__label">
               <img src={hobby} alt="" className="about__content__card__label__image" />
               <p className="about__content__card__label__title">Mes hobby</p>

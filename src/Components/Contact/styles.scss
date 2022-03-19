@@ -11,6 +11,7 @@
   border-radius: 10px;
   -webkit-box-shadow: 0px 0px 14px 2px #000000; 
   box-shadow: 0px 0px 14px 2px #000000;
+  animation: scale 0.3s ease-in-out;
 
   &__title-bar {
     background-color: #1B2125;
@@ -191,6 +192,24 @@
   .contact {
     width: 80vw;
     height: 65vh;
+    transition: all 0.5s ease-in-out;
+
+    &.active {
+      top: 2rem;
+      left: 0%;
+      transform: none;
+      width: 100vw;
+      height: 90vh;
+      transition: all 0.5s ease-in-out;
+
+      .contact {
+        &__content {
+          &__left {
+            width: 45%;
+          }
+        }
+      }
+    }
 
     &__content {
       &__left {
@@ -206,10 +225,22 @@
 
 @media (min-width:1024px) {
   .contact {
-    width: 60vw;
-    top: 50%;
-    left: 55%;
-    animation: scale 0.3s ease-in-out;
+    width: 40vw;
+    top: 55%;
+    left: 70%;
+
+    &.active {
+      top: 0;
+      height: 95vh;
+
+      .contact {
+        &__content {
+          &__left {
+            width: 15%;
+          }
+        }
+      }
+    }
 
     &__title-bar {
       &__left {
@@ -239,7 +270,7 @@
 
     &__content {
       &__left {
-        width: 30%;
+        width: 40%;
 
         &__card {
           transition: 0.5s ease-in-out;

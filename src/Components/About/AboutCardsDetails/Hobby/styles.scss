@@ -84,6 +84,47 @@
   }
 }
 
+
+@media (min-width: 768px) {
+  .hobby {
+    &.active {
+      padding: 10px 30px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    &__container {
+      width: 47.5%;
+
+      &__text {
+        font-size: 19px;
+        text-align: center;
+        margin: 5px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .hobby {
+    &__container {
+      width: 24%;
+
+      &__effect {
+        transition: 0.4s ease-in-out;
+        cursor: default;
+
+        &:hover {
+          backdrop-filter: blur(3px);
+          transition: 0.1s ease-in-out;
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}
+
 @keyframes toggleDetails {
   from {
     opacity: 0;

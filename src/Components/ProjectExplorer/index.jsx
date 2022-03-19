@@ -10,8 +10,8 @@ import arrowRight from "../../assets/icons/arrow-right.png";
 import arrowCurved from "../../assets/icons/arrow-curved.png";
 
 //---------------------components -------------------------
-import { useDispatch } from 'react-redux';
-import { toggleProjectExplorer } from '../../action';
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleMaximize, toggleProjectExplorer } from '../../action';
 import { NavLink, useParams } from 'react-router-dom';
 
 //------------------------ data ---------------------------
@@ -21,14 +21,20 @@ const ProjectExplorer = () => {
 
   const projectId = useParams().slug;
 
+  const { maximizeToggled } = useSelector(state => state);
+
   const dispatch = useDispatch();
 
   const handleClickClose = () => {
     dispatch(toggleProjectExplorer());
   }
+  
+  const handleClickMaximize = () => {
+    dispatch(toggleMaximize());
+  }
 
   return (
-    <div className="project-explorer">
+    <div className={"project-explorer " + (maximizeToggled && "active")}>
       {/* title bar with title and 3 buttons (minimize, maximize & close) */}
       <div className="project-explorer__title-bar">
         <div className="project-explorer__title-bar__left">
@@ -37,7 +43,7 @@ const ProjectExplorer = () => {
         </div>
         <div className="project-explorer__title-bar__right">
           <img className="project-explorer__title-bar__right__icons" src={minimize} alt="" />
-          <img className="project-explorer__title-bar__right__icons" src={maximize} alt="" />
+          <img className="project-explorer__title-bar__right__icons" src={maximize} alt="" onClick={handleClickMaximize} />
           <NavLink to={"/"}>
             <img onClick={handleClickClose} className="project-explorer__title-bar__right__icons project-explorer__title-bar__right__icons--close" src={close} alt="" />
           </NavLink>

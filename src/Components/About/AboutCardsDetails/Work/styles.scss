@@ -24,6 +24,18 @@
   }
 }
 
+@media (min-width: 768px) {
+  .work {
+    &.active {
+      padding: 10px 30px;
+    }
+
+    &__text {
+      font-size: 18px;
+    }
+  }
+}
+
 @keyframes toggleDetails {
   from {
     opacity: 0;

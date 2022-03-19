@@ -28,4 +28,20 @@
     font-family: vars.$font-medium;
     margin-bottom: 20px;
   }
+
+  &__content {
+    & a {
+      color: rgb(184, 184, 184);
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .mail__content {
+    & a {
+      &:hover {
+        color: rgb(211, 211, 211);
+      }
+    }
+  }
 }

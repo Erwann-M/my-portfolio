@@ -33,6 +33,24 @@
   }
 }
 
+@media (min-width: 768px) {
+  .tech {
+    &.active {
+      padding: 10px 30px;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .tech {
+    &.active {
+      justify-content: space-around;
+    }
+  }
+}
+
 @keyframes toggleDetails {
   from {
     opacity: 0;

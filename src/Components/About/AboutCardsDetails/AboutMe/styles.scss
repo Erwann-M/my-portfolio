@@ -19,6 +19,17 @@
   }
 }
 
+@media (min-width: 768px) {
+  .about-me {
+    &.active {
+      padding: 10px 30px;
+    }
+    &__content {
+      font-size: 17px;
+    }
+  }
+}
+
 @keyframes toggleDetails {
   from {
     opacity: 0;

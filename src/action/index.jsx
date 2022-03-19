@@ -105,3 +105,9 @@ export const TOGGLE_EXPERIENCES = "TOGGLE_EXPERIENCES";
 export const toggleExperiences = () => ({
   type: TOGGLE_EXPERIENCES,
 });
+
+export const TOGGLE_MAXIMIZE = "TOGGLE_MAXIMIZE";
+
+export const toggleMaximize = () => ({
+  type: TOGGLE_MAXIMIZE,
+});

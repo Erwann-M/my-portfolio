@@ -68,7 +68,7 @@ const Navbar = () => {
   }
 
   const handleClickTrash = () => {
-    alert('ok c\'est bon');
+    alert('Il n\'y a rien dans la corbeille');
   };
 
   return(

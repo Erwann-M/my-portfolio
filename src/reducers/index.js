@@ -3,7 +3,7 @@
 |*==================================================================*/
 
 import { Navigate } from "react-router";
-import {GET_DATE, GET_TIME, INCREMENT_ERROR_COUNTER, SET_LOGIN, TOGGLE_ABOUT, TOGGLE_ABOUT_ME, TOGGLE_BURGER_MENU, TOGGLE_CONTACT, TOGGLE_EXPERIENCES, TOGGLE_HOBBY, TOGGLE_MENU, TOGGLE_PROJECT_EXPLORER, TOGGLE_STUDY, TOGGLE_TECH, TOGGLE_WORK, UNSET_LOGIN } from "../action";
+import {GET_DATE, GET_TIME, INCREMENT_ERROR_COUNTER, SET_LOGIN, TOGGLE_ABOUT, TOGGLE_ABOUT_ME, TOGGLE_BURGER_MENU, TOGGLE_CONTACT, TOGGLE_EXPERIENCES, TOGGLE_HOBBY, TOGGLE_MENU, TOGGLE_PROJECT_EXPLORER, TOGGLE_STUDY, TOGGLE_TECH, TOGGLE_WORK, UNSET_LOGIN, TOGGLE_MAXIMIZE } from "../action";
 
 const initialState = {
   loggedIn: true,
@@ -25,6 +25,7 @@ const initialState = {
   hobbyToggled: false,
 
   experiencesToggled: false,
+  maximizeToggled: false,
 };
 
 const reducer = (state = initialState, action = {}) => {
@@ -62,6 +63,7 @@ const reducer = (state = initialState, action = {}) => {
           menuToggled: false,
           contactToggled: false,
           aboutToggled:false,
+          maximizeToggled: false,
         };
       case INCREMENT_ERROR_COUNTER:
         return {
@@ -75,6 +77,7 @@ const reducer = (state = initialState, action = {}) => {
           menuToggled: false,
           projectExplorerToggled: false,
           aboutToggled:false,
+          maximizeToggled: false,
         };
       case TOGGLE_BURGER_MENU:
         return {
@@ -88,6 +91,8 @@ const reducer = (state = initialState, action = {}) => {
           menuToggled: false,
           projectExplorerToggled: false,
           contactToggled: false,
+          maximizeToggled: false,
+
           aboutMeToggled: false,
           techToggled: false,
           studyToggled: false,
@@ -123,6 +128,11 @@ const reducer = (state = initialState, action = {}) => {
         return {
           ...state,
           experiencesToggled: !state.experiencesToggled,
+        };
+      case TOGGLE_MAXIMIZE:
+        return {
+          ...state,
+          maximizeToggled: !state.maximizeToggled,
         }
     default:
       return state;
