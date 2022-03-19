@@ -117,3 +117,21 @@ export const TOGGLE_BROWSER = "TOGGLE_BROWSER";
 export const toggleBrowser = () => ({
   type: TOGGLE_BROWSER,
 });
+
+export const TOGGLE_NAVBAR_ARROW = "TOGGLE_NAVBAR_ARROW";
+
+export const toggleNavbarArrow = () => ({
+  type: TOGGLE_NAVBAR_ARROW,
+});
+
+export const TOGGLE_DEFENDER = "TOGGLE_DEFENDER";
+
+export const toggleDefender = () => ({
+  type: TOGGLE_DEFENDER,
+});
+
+export const TOGGLE_NETWORK_INFO = "TOGGLE_NETWORK_INFO";
+
+export const toggleNetworkInfo = () => ({
+  type: TOGGLE_NETWORK_INFO,
+});

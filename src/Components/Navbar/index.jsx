@@ -20,18 +20,21 @@ import Draggable from 'react-draggable';
 import { NavLink } from 'react-router-dom';
 
 // local components ------------------------------------------------
-import { getTime, getDate, toggleMenu, toggleProjectExplorer, toggleContact, toggleAbout, toggleBrowser } from '../../action';
+import { getTime, getDate, toggleMenu, toggleProjectExplorer, toggleContact, toggleAbout, toggleBrowser, toggleNavbarArrow, toggleNetworkInfo } from '../../action';
 import Menu from '../Menu';
 import ProjectExplorer from '../ProjectExplorer';
 import Contact from '../Contact';
 import About from '../About';
 import Browser from '../Browser';
+import MoreApp from '../MoreApp';
+import Defender from '../Defender';
+import NetworkInfo from '../NetworkInfo';
 
 const Navbar = () => {
 
   const dispatch = useDispatch();
 
-  const {date, time, menuToggled, projectExplorerToggled, contactToggled, aboutToggled, browserToggled} = useSelector(state => state);
+  const {date, time, menuToggled, projectExplorerToggled, contactToggled, aboutToggled, browserToggled, navbarArrowToggled, defenderToggled} = useSelector(state => state);
 
   useEffect(
     () => {
@@ -63,9 +66,16 @@ const Navbar = () => {
     dispatch(toggleContact());
   };
 
+  const handleClickArrow = () => {
+    dispatch(toggleNavbarArrow());
+  }
   
   const handleClickAbout = () => {
     dispatch(toggleAbout());
+  }
+
+  const handleClickNetworkInfo = () => {
+    dispatch(toggleNetworkInfo())
   }
 
   const handleClickTrash = () => {
@@ -146,9 +156,9 @@ const Navbar = () => {
       <div className='navbar__info'>
         <div className="navbar__info__container">
 
-          <img src={arrowUp} alt="Voir plus d'options" className='navbar__info__toggle navbar__info__icon' />
+          <img src={arrowUp} alt="Voir plus d'options" className={'navbar__info__toggle navbar__info__icon ' + (navbarArrowToggled && "active")} onClick={handleClickArrow} />
 
-          <div className='navbar__info__system'>
+          <div className='navbar__info__system' onClick={handleClickNetworkInfo}>
             <img src={wifi} alt="info intensité du réseau (simulation)" className='navbar__info__icon' />
             <img src={sound} alt="info intensité du son (simulation)" className='navbar__info__icon' />
             <img src={battery} alt="info niveau de charge de la batterie (simulation)" className='navbar__info__icon' />
@@ -166,6 +176,9 @@ const Navbar = () => {
       {contactToggled && <Contact />}
       {aboutToggled && <About />}
       {browserToggled && <Browser />}
+      <MoreApp />
+      {defenderToggled && <Defender />}
+      <NetworkInfo />
     </div>
   );
 };
