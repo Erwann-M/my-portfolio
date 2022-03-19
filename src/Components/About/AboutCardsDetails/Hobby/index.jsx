@@ -7,7 +7,71 @@ const Hobby = () => {
   
   return (
     <div className={"hobby " + (hobbyToggled && "active")}>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, nam autem. Earum, veniam distinctio veritatis optio aliquid debitis omnis laboriosam? Eos beatae saepe aut, quisquam aliquam quaerat. Hic, id cumque.
+
+      <div className="hobby__container guitar">
+        <div className="hobby__container__effect">
+          <p className="hobby__container__text">
+            Guitare
+          </p>
+        </div>
+      </div>
+
+      <div className="hobby__container video-game">
+        <div className="hobby__container__effect">
+          <p className="hobby__container__text">
+            Jeux vidéos
+          </p>
+        </div>
+      </div>
+
+      <div className="hobby__container programming">
+        <div className="hobby__container__effect">
+          <p className="hobby__container__text">
+            Programmation
+          </p>
+        </div>
+      </div>
+
+      <div className="hobby__container crypto">
+        <div className="hobby__container__effect">
+          <p className="hobby__container__text">
+            blockchain et cryptomonnais
+          </p>
+        </div>
+      </div>
+
+      <div className="hobby__container board-game">
+        <div className="hobby__container__effect">
+          <p className="hobby__container__text">
+            Jeux de plateau
+          </p>
+        </div>
+      </div>
+
+      <div className="hobby__container smart-home">
+        <div className="hobby__container__effect">
+          <p className="hobby__container__text">
+            Domotique
+          </p>
+        </div>
+      </div>
+
+      <div className="hobby__container travel">
+        <div className="hobby__container__effect">
+          <p className="hobby__container__text">
+            Voyages
+          </p>
+        </div>
+      </div>
+
+      <div className="hobby__container martial-art">
+        <div className="hobby__container__effect">
+          <p className="hobby__container__text">
+            Arts martiaux
+          </p>
+        </div>
+      </div>
+
     </div>
   )
 };

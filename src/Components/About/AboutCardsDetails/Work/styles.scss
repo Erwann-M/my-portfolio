@@ -22,36 +22,6 @@
       color: rgb(175, 175, 175);
     }
   }
-
-  &__toggle {
-    display: flex;
-    align-items: center;
-
-    &__arrow {
-      width: 15px;
-      margin-right: 10px;
-      transition: 0.2s ease-in-out;
-
-      &.active {
-        transform: rotate(180deg);
-        transition: 0.2s ease-in-out;
-      }
-    }
-
-    &__text {
-      text-decoration: underline;
-      color: rgb(175, 175, 175);
-    }
-  }
-
-  &__alt {
-    display: none;
-    margin-top: 10px;
-
-    &.active {
-      display: block;
-    }
-  }
 }
 
 @keyframes toggleDetails {
