@@ -1,12 +1,19 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleHobby } from '../../../../action';
 import './styles.scss';
 
 const Hobby = () => {
 
   const { hobbyToggled } = useSelector(state => state);
   
+  const dispatch = useDispatch();
+  
+  const handleClickHobby = () => {
+    dispatch(toggleHobby());
+  }
+  
   return (
-    <div className={"hobby " + (hobbyToggled && "active")}>
+    <div className={"hobby " + (hobbyToggled && "active")} onClick={handleClickHobby}>
 
       <div className="hobby__container guitar">
         <div className="hobby__container__effect">

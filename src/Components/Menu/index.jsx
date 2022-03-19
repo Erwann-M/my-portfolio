@@ -16,7 +16,7 @@ import onoff from '../../assets/icons/onoff.svg';
 
 //---------component--------------------
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleProjectExplorer, unsetLogin, toggleContact, toggleAbout } from '../../action';
+import { toggleProjectExplorer, unsetLogin, toggleContact, toggleAbout, toggleBrowser } from '../../action';
 import { NavLink } from 'react-router-dom';
 
 
@@ -37,6 +37,10 @@ const Menu = () => {
 
   const handleClickAbout = () => {
     dispatch(toggleAbout());
+  };
+
+  const handleClickBrowser = () => {
+    dispatch(toggleBrowser());
   }
 
   const handleClickOff = () => {
@@ -51,10 +55,12 @@ const Menu = () => {
 
         <div className="menu__pin">
 
-          <div className="menu__pin__container">
-            <img src={browser} alt="navigateur internet" className="menu__pin__container-icon" />
-            <p className='menu__pin__container-title'>Navigateur</p>
-          </div>
+          <NavLink to={"/"} className="menu__pin-nav">
+            <div className="menu__pin__container" onClick={handleClickBrowser}>
+              <img src={browser} alt="navigateur internet" className="menu__pin__container-icon" />
+              <p className='menu__pin__container-title'>Navigateur</p>
+            </div>
+          </NavLink>
 
           <NavLink to={"/"} className="menu__pin-nav">
             <div className="menu__pin__container" onClick={handleClickProject}>

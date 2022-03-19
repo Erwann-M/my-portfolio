@@ -20,17 +20,18 @@ import Draggable from 'react-draggable';
 import { NavLink } from 'react-router-dom';
 
 // local components ------------------------------------------------
-import { getTime, getDate, toggleMenu, toggleProjectExplorer, toggleContact, toggleAbout } from '../../action';
+import { getTime, getDate, toggleMenu, toggleProjectExplorer, toggleContact, toggleAbout, toggleBrowser } from '../../action';
 import Menu from '../Menu';
 import ProjectExplorer from '../ProjectExplorer';
 import Contact from '../Contact';
 import About from '../About';
+import Browser from '../Browser';
 
 const Navbar = () => {
 
   const dispatch = useDispatch();
 
-  const {date, time, menuToggled, projectExplorerToggled, contactToggled, aboutToggled} = useSelector(state => state);
+  const {date, time, menuToggled, projectExplorerToggled, contactToggled, aboutToggled, browserToggled} = useSelector(state => state);
 
   useEffect(
     () => {
@@ -51,7 +52,7 @@ const Navbar = () => {
   };
 
   const handleClickBrowser = () => {
-    alert('browser clicked');
+    dispatch(toggleBrowser());
   };
 
   const handleClickProject = () => {
@@ -81,18 +82,19 @@ const Navbar = () => {
               src={homeIcon} 
               alt="Menu principal" 
               title='Menu' 
-              className={'navbar__icon__list__img' + (menuToggled ? ' icon-active' : '')}
+              className={'navbar__icon__list__img ' + (menuToggled && "icon-active")}
             />
           </li>
-
-          <li onClick={handleClickBrowser} className="navbar__icon__list__item" >
-            <img 
-              src={chromeIcon} 
-              alt="Navigateur internet" 
-              title='Navigateur internet' 
-              className='navbar__icon__list__img' 
-            />
-          </li>
+          <NavLink to={"/"}>
+            <li onClick={handleClickBrowser} className="navbar__icon__list__item" >
+              <img 
+                src={chromeIcon} 
+                alt="Navigateur internet" 
+                title='Navigateur internet' 
+                className={'navbar__icon__list__img ' + (browserToggled && "icon-active")} 
+              />
+            </li>
+          </NavLink>
 
           <NavLink to={"/"}>
             <li onClick={handleClickProject} className="navbar__icon__list__item" >
@@ -100,7 +102,7 @@ const Navbar = () => {
                   src={explorerIcon} 
                   alt="Explorer mes projets" 
                   title='Explorateur de projets' 
-                  className={'navbar__icon__list__img' + (projectExplorerToggled ? ' icon-active' : '')}
+                  className={'navbar__icon__list__img ' + (projectExplorerToggled && "icon-active")}
                 />
             </li>
           </NavLink>
@@ -110,7 +112,7 @@ const Navbar = () => {
               <img 
                 src={emailIcon} 
                 alt="Me contacter" 
-                className={'navbar__icon__list__img' + (contactToggled ? ' icon-active' : '')}
+                className={'navbar__icon__list__img ' + (contactToggled && "icon-active")}
                 title='Me contacter' 
               />
             </li>
@@ -121,7 +123,7 @@ const Navbar = () => {
               <img 
                 src={aboutIcon} 
                 alt="Mon profil" 
-                className={'navbar__icon__list__img' + (aboutToggled ? ' icon-active' : '')}
+                className={'navbar__icon__list__img ' + (aboutToggled && "icon-active")}
                 title='Mon profil' 
               />
             </li>
@@ -163,6 +165,7 @@ const Navbar = () => {
       {projectExplorerToggled && <ProjectExplorer />}
       {contactToggled && <Contact />}
       {aboutToggled && <About />}
+      {browserToggled && <Browser />}
     </div>
   );
 };

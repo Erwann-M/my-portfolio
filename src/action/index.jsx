@@ -111,3 +111,9 @@ export const TOGGLE_MAXIMIZE = "TOGGLE_MAXIMIZE";
 export const toggleMaximize = () => ({
   type: TOGGLE_MAXIMIZE,
 });
+
+export const TOGGLE_BROWSER = "TOGGLE_BROWSER";
+
+export const toggleBrowser = () => ({
+  type: TOGGLE_BROWSER,
+});

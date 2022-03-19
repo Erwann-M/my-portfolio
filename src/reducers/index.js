@@ -3,7 +3,7 @@
 |*==================================================================*/
 
 import { Navigate } from "react-router";
-import {GET_DATE, GET_TIME, INCREMENT_ERROR_COUNTER, SET_LOGIN, TOGGLE_ABOUT, TOGGLE_ABOUT_ME, TOGGLE_BURGER_MENU, TOGGLE_CONTACT, TOGGLE_EXPERIENCES, TOGGLE_HOBBY, TOGGLE_MENU, TOGGLE_PROJECT_EXPLORER, TOGGLE_STUDY, TOGGLE_TECH, TOGGLE_WORK, UNSET_LOGIN, TOGGLE_MAXIMIZE } from "../action";
+import {GET_DATE, GET_TIME, INCREMENT_ERROR_COUNTER, SET_LOGIN, TOGGLE_ABOUT, TOGGLE_ABOUT_ME, TOGGLE_BURGER_MENU, TOGGLE_CONTACT, TOGGLE_EXPERIENCES, TOGGLE_HOBBY, TOGGLE_MENU, TOGGLE_PROJECT_EXPLORER, TOGGLE_STUDY, TOGGLE_TECH, TOGGLE_WORK, UNSET_LOGIN, TOGGLE_MAXIMIZE, TOGGLE_BROWSER } from "../action";
 
 const initialState = {
   loggedIn: true,
@@ -14,7 +14,8 @@ const initialState = {
   projectExplorerToggled: false,
   contactToggled: false,
   burgerMenuToggled: false,
-  aboutToggled: true,
+  aboutToggled: false,
+  browserToggled: false,
 
   errorCounter: 0,
 
@@ -64,6 +65,7 @@ const reducer = (state = initialState, action = {}) => {
           contactToggled: false,
           aboutToggled:false,
           maximizeToggled: false,
+          browserToggled: false,
         };
       case INCREMENT_ERROR_COUNTER:
         return {
@@ -78,11 +80,22 @@ const reducer = (state = initialState, action = {}) => {
           projectExplorerToggled: false,
           aboutToggled:false,
           maximizeToggled: false,
+          browserToggled: false,
         };
       case TOGGLE_BURGER_MENU:
         return {
           ...state,
           burgerMenuToggled: !state.burgerMenuToggled,
+        };
+      case TOGGLE_BROWSER:
+        return {
+          ...state,
+          browserToggled: !state.browserToggled,
+          menuToggled: false,
+          projectExplorerToggled: false,
+          aboutToggled: false,
+          maximizeToggled: false,
+          contactToggled: false,
         };
       case TOGGLE_ABOUT:
         return {
@@ -92,6 +105,7 @@ const reducer = (state = initialState, action = {}) => {
           projectExplorerToggled: false,
           contactToggled: false,
           maximizeToggled: false,
+          browserToggled: false,
 
           aboutMeToggled: false,
           techToggled: false,
