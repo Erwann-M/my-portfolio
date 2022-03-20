@@ -92,8 +92,8 @@ const ProjectExplorer = () => {
 
             <img className="project-explorer__content__details__image" src={datas[projectId].image} alt="" />
             <p className="project-explorer__content__details__description">{datas[projectId].description}</p>
-            <p className="project-explorer__content__details__link">Lien: <a href={datas[projectId].link}>{datas[projectId].link}</a></p>
-            <p className="project-explorer__content__details__github">Lien GitHub: <a href={datas[projectId].githubLink}>{datas[projectId].githubLink}</a></p>
+            <p className="project-explorer__content__details__link">Lien: <a href={datas[projectId].link} target="_blank">{datas[projectId].link}</a></p>
+            <p className="project-explorer__content__details__github">Lien GitHub: <a href={datas[projectId].githubLink} target="_blank">{datas[projectId].githubLink}</a></p>
           </div>
 
         : 
