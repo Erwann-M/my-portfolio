@@ -8,9 +8,13 @@ import emailIcon from '../../assets/icons/gmail.png';
 import aboutIcon from '../../assets/icons/user.png';
 import arrowUp from '../../assets/icons/arrow-up.png';
 import wifi from '../../assets/icons/wifi.png';
-import sound from '../../assets/icons/sound.png';
+import sound3 from '../../assets/icons/sound3.png';
+import sound2 from '../../assets/icons/sound2.png';
+import sound1 from '../../assets/icons/sound1.png';
+import sound0 from '../../assets/icons/sound0.png';
 import battery from '../../assets/icons/battery.png';
 import trash from '../../assets/icons/Recycle-bin.png';
+import notWifi from "../../assets/icons/not-wifi.png";
 
 // library ------------------------------------------------
 import { useSelector } from 'react-redux';
@@ -34,7 +38,7 @@ const Navbar = () => {
 
   const dispatch = useDispatch();
 
-  const {date, time, menuToggled, projectExplorerToggled, contactToggled, aboutToggled, browserToggled, navbarArrowToggled, defenderToggled} = useSelector(state => state);
+  const {date, time, menuToggled, projectExplorerToggled, contactToggled, aboutToggled, browserToggled, navbarArrowToggled, defenderToggled, wifiToggled, soundValue} = useSelector(state => state);
 
   useEffect(
     () => {
@@ -81,6 +85,21 @@ const Navbar = () => {
   const handleClickTrash = () => {
     alert('Il n\'y a rien dans la corbeille');
   };
+
+  const soundImage = (value) => {
+    switch (value) {
+      case "0":
+        return sound0
+      case "1":
+        return sound1
+      case "2":
+        return sound2
+      case "3":
+        return sound3
+      default:
+        return sound3
+    }
+  }
 
   return(
     <div className="navbar">
@@ -159,8 +178,12 @@ const Navbar = () => {
           <img src={arrowUp} alt="Voir plus d'options" className={'navbar__info__toggle navbar__info__icon ' + (navbarArrowToggled && "active")} onClick={handleClickArrow} />
 
           <div className='navbar__info__system' onClick={handleClickNetworkInfo}>
-            <img src={wifi} alt="info intensité du réseau (simulation)" className='navbar__info__icon' />
-            <img src={sound} alt="info intensité du son (simulation)" className='navbar__info__icon' />
+            {wifiToggled ? 
+              <img src={wifi} alt="info intensité du réseau (simulation)" className='navbar__info__icon' /> 
+              : 
+              <img src={notWifi} alt="info intensité du réseau (simulation)" className='navbar__info__icon' />}
+            
+            <img src={soundImage(soundValue)} alt="info intensité du son (simulation)" className='navbar__info__icon' />
             <img src={battery} alt="info niveau de charge de la batterie (simulation)" className='navbar__info__icon' />
           </div>
 

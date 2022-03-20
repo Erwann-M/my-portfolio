@@ -3,7 +3,7 @@
 |*==================================================================*/
 
 import { Navigate } from "react-router";
-import {GET_DATE, GET_TIME, INCREMENT_ERROR_COUNTER, SET_LOGIN, TOGGLE_ABOUT, TOGGLE_ABOUT_ME, TOGGLE_BURGER_MENU, TOGGLE_CONTACT, TOGGLE_EXPERIENCES, TOGGLE_HOBBY, TOGGLE_MENU, TOGGLE_PROJECT_EXPLORER, TOGGLE_STUDY, TOGGLE_TECH, TOGGLE_WORK, UNSET_LOGIN, TOGGLE_MAXIMIZE, TOGGLE_BROWSER, TOGGLE_NAVBAR_ARROW, TOGGLE_DEFENDER, TOGGLE_NETWORK_INFO } from "../action";
+import {GET_DATE, GET_TIME, INCREMENT_ERROR_COUNTER, SET_LOGIN, TOGGLE_ABOUT, TOGGLE_ABOUT_ME, TOGGLE_BURGER_MENU, TOGGLE_CONTACT, TOGGLE_EXPERIENCES, TOGGLE_HOBBY, TOGGLE_MENU, TOGGLE_PROJECT_EXPLORER, TOGGLE_STUDY, TOGGLE_TECH, TOGGLE_WORK, UNSET_LOGIN, TOGGLE_MAXIMIZE, TOGGLE_BROWSER, TOGGLE_NAVBAR_ARROW, TOGGLE_DEFENDER, TOGGLE_NETWORK_INFO, CHANGE_LUMINOSITY, CHANGE_SOUND, TOGGLE_WIFI, TOGGLE_BLUETOOTH, TOGGLE_FLY_MODE } from "../action";
 
 const initialState = {
   loggedIn: true,
@@ -31,6 +31,15 @@ const initialState = {
   navbarArrowToggled: false,
   defenderToggled: false,
   networkInfoToggled: false,
+
+  luminosityValue: 5,
+  luminosity: 1,
+
+  soundValue: 100,
+
+  wifiToggled: true,
+  bluetoothToggled: true,
+  flyModeToggled: false,
 };
 
 const reducer = (state = initialState, action = {}) => {
@@ -156,6 +165,7 @@ const reducer = (state = initialState, action = {}) => {
         return {
           ...state,
           navbarArrowToggled: !state.navbarArrowToggled,
+          networkInfoToggled: false,
         };
       case TOGGLE_DEFENDER:
         return {
@@ -168,7 +178,35 @@ const reducer = (state = initialState, action = {}) => {
           ...state,
           networkInfoToggled: !state.networkInfoToggled,
           navbarArrowToggled: false,
-        }
+        };
+      case CHANGE_LUMINOSITY:
+        return {
+          ...state,
+          luminosityValue: action.value,
+          luminosity: action.opacityValue,
+        };
+      case CHANGE_SOUND:
+        return {
+          ...state,
+          soundValue: action.soundValue,
+        };
+      case TOGGLE_WIFI:
+        return {
+          ...state,
+          wifiToggled: !state.wifiToggled,
+        };
+      case TOGGLE_BLUETOOTH:
+        return {
+          ...state,
+          bluetoothToggled: !state.bluetoothToggled,
+        };
+      case TOGGLE_FLY_MODE:
+        return {
+          ...state,
+          flyModeToggled: !state.flyModeToggled,
+          wifiToggled: false,
+          bluetoothToggled: false,
+        };
     default:
       return state;
   }

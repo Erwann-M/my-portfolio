@@ -40,7 +40,11 @@
     transform: translateY(200px);
 
     &__image {
+      padding: 5px;
       cursor: pointer;
+      &:hover {
+        background-color: #3b3b3b;
+      }
     }
   }
 }

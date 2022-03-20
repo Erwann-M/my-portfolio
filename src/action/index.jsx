@@ -135,3 +135,36 @@ export const TOGGLE_NETWORK_INFO = "TOGGLE_NETWORK_INFO";
 export const toggleNetworkInfo = () => ({
   type: TOGGLE_NETWORK_INFO,
 });
+
+export const CHANGE_LUMINOSITY = "CHANGE_LUMINOSITY";
+
+export const changeLuminosity = (value, opacityValue) => ({
+  type: CHANGE_LUMINOSITY,
+  value,
+  opacityValue,
+});
+
+export const CHANGE_SOUND = "CHANGE_SOUND";
+
+export const changeSound = (soundValue) => ({
+  type: CHANGE_SOUND,
+  soundValue
+});
+
+export const TOGGLE_WIFI = "TOGGLE_WIFI";
+
+export const toggleWifi = () => ({
+  type: TOGGLE_WIFI,
+});
+
+export const TOGGLE_BLUETOOTH = "TOGGLE_BLUETOOTH";
+
+export const toggleBluetooth = () => ({
+  type: TOGGLE_BLUETOOTH,
+});
+
+export const TOGGLE_FLY_MODE = "TOGGLE_FLY_MODE";
+
+export const toggleFlyMode = () => ({
+  type: TOGGLE_FLY_MODE,
+});
