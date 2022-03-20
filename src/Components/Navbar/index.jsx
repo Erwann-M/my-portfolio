@@ -24,7 +24,7 @@ import Draggable from 'react-draggable';
 import { NavLink } from 'react-router-dom';
 
 // local components ------------------------------------------------
-import { getTime, getDate, toggleMenu, toggleProjectExplorer, toggleContact, toggleAbout, toggleBrowser, toggleNavbarArrow, toggleNetworkInfo } from '../../action';
+import { getTime, getDate, toggleMenu, toggleProjectExplorer, toggleContact, toggleAbout, toggleBrowser, toggleNavbarArrow, toggleNetworkInfo, toggleTrash } from '../../action';
 import Menu from '../Menu';
 import ProjectExplorer from '../ProjectExplorer';
 import Contact from '../Contact';
@@ -33,12 +33,14 @@ import Browser from '../Browser';
 import MoreApp from '../MoreApp';
 import Defender from '../Defender';
 import NetworkInfo from '../NetworkInfo';
+import Trash from '../Trash';
+import ErrorWin from '../ErrorWin';
 
 const Navbar = () => {
 
   const dispatch = useDispatch();
 
-  const {date, time, menuToggled, projectExplorerToggled, contactToggled, aboutToggled, browserToggled, navbarArrowToggled, defenderToggled, wifiToggled, soundValue} = useSelector(state => state);
+  const {date, time, menuToggled, projectExplorerToggled, contactToggled, aboutToggled, browserToggled, navbarArrowToggled, defenderToggled, wifiToggled, soundValue, trashToggled, errorToggled} = useSelector(state => state);
 
   useEffect(
     () => {
@@ -79,11 +81,11 @@ const Navbar = () => {
   }
 
   const handleClickNetworkInfo = () => {
-    dispatch(toggleNetworkInfo())
+    dispatch(toggleNetworkInfo());
   }
 
   const handleClickTrash = () => {
-    alert('Il n\'y a rien dans la corbeille');
+    dispatch(toggleTrash());
   };
 
   const soundImage = (value) => {
@@ -202,6 +204,8 @@ const Navbar = () => {
       <MoreApp />
       {defenderToggled && <Defender />}
       <NetworkInfo />
+      {trashToggled && <Trash />}
+      {errorToggled && <ErrorWin />}
     </div>
   );
 };

@@ -3,7 +3,7 @@
 |*==================================================================*/
 
 import { Navigate } from "react-router";
-import {GET_DATE, GET_TIME, INCREMENT_ERROR_COUNTER, SET_LOGIN, TOGGLE_ABOUT, TOGGLE_ABOUT_ME, TOGGLE_BURGER_MENU, TOGGLE_CONTACT, TOGGLE_EXPERIENCES, TOGGLE_HOBBY, TOGGLE_MENU, TOGGLE_PROJECT_EXPLORER, TOGGLE_STUDY, TOGGLE_TECH, TOGGLE_WORK, UNSET_LOGIN, TOGGLE_MAXIMIZE, TOGGLE_BROWSER, TOGGLE_NAVBAR_ARROW, TOGGLE_DEFENDER, TOGGLE_NETWORK_INFO, CHANGE_LUMINOSITY, CHANGE_SOUND, TOGGLE_WIFI, TOGGLE_BLUETOOTH, TOGGLE_FLY_MODE } from "../action";
+import {GET_DATE, GET_TIME, INCREMENT_ERROR_COUNTER, SET_LOGIN, TOGGLE_ABOUT, TOGGLE_ABOUT_ME, TOGGLE_BURGER_MENU, TOGGLE_CONTACT, TOGGLE_EXPERIENCES, TOGGLE_HOBBY, TOGGLE_MENU, TOGGLE_PROJECT_EXPLORER, TOGGLE_STUDY, TOGGLE_TECH, TOGGLE_WORK, UNSET_LOGIN, TOGGLE_MAXIMIZE, TOGGLE_BROWSER, TOGGLE_NAVBAR_ARROW, TOGGLE_DEFENDER, TOGGLE_NETWORK_INFO, CHANGE_LUMINOSITY, CHANGE_SOUND, TOGGLE_WIFI, TOGGLE_BLUETOOTH, TOGGLE_FLY_MODE, TOGGLE_TRASH, TOGGLE_ERROR } from "../action";
 
 const initialState = {
   loggedIn: true,
@@ -16,8 +16,10 @@ const initialState = {
   burgerMenuToggled: false,
   aboutToggled: false,
   browserToggled: false,
+  trashToggled: false,
 
   errorCounter: 0,
+  errorToggled: true,
 
   aboutMeToggled: false,
   techToggled: false,
@@ -206,6 +208,22 @@ const reducer = (state = initialState, action = {}) => {
           flyModeToggled: !state.flyModeToggled,
           wifiToggled: false,
           bluetoothToggled: false,
+        };
+      case TOGGLE_TRASH:
+        return {
+          ...state,
+          trashToggled: !state.trashToggled,
+          menuToggled: false,
+          projectExplorerToggled: false,
+          aboutToggled: false,
+          maximizeToggled: false,
+          contactToggled: false,
+          browserToggled: false,
+        };
+      case TOGGLE_ERROR:
+        return {
+          ...state,
+          errorToggled: !state.errorToggled
         };
     default:
       return state;

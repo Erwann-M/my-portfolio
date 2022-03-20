@@ -13,6 +13,13 @@
   src: url(../assets/font/Roboto/Roboto-Thin.ttf);
 }
 
+@font-face {
+  font-family: "win95";
+  src: url(../assets/font/W95FA/w95fa.woff);
+}
+
 $font-medium: 'roboto-medium';
 $font-regular: 'roboto-regular';
 $font-thin: 'roboto-thin';
+
+$font-win: 'win95';

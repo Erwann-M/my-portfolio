@@ -168,3 +168,15 @@ export const TOGGLE_FLY_MODE = "TOGGLE_FLY_MODE";
 export const toggleFlyMode = () => ({
   type: TOGGLE_FLY_MODE,
 });
+
+export const TOGGLE_TRASH = "TOGGLE_TRASH";
+
+export const toggleTrash = () => ({
+  type: TOGGLE_TRASH,
+});
+
+export const TOGGLE_ERROR = "DISPLAY_ERROR";
+
+export const toggleError = () => ({
+  type: TOGGLE_ERROR,
+});
