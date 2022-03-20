@@ -19,7 +19,7 @@ const initialState = {
   trashToggled: false,
 
   errorCounter: 0,
-  errorToggled: true,
+  errorToggled: false,
 
   aboutMeToggled: false,
   techToggled: false,
