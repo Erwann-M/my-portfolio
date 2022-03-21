@@ -16,7 +16,7 @@ const MailJamie = () => (
       - Adresse e-mail: <a href="mailto:erwann.martin.dev@gmail.com" target="_blank">erwann.martin.dev@gmail.com</a><br/><br/>
       - LinkedIn: <a href="https://www.linkedin.com/in/erwann-martin/" target="_blank">https://www.linkedin.com/in/erwann-martin/</a><br/><br/>
       - Twitter: <a href="https://twitter.com/ErwannMartin3" target="_blank">https://twitter.com/ErwannMartin3</a><br/><br/>
-      - Secteurs de recherche: Côtes d'armor, toute la france (remote)
+      - Secteurs de recherche: Côtes d'Armor, toute la France (remote)
     </p>
 
   </div>

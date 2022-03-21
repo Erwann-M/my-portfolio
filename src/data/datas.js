@@ -26,7 +26,7 @@ const datas = [
     icon: bbqIcon,
     link: "http://blabla-quest.surge.sh/",
     githubLink: "https://github.com/Erwann-M/BlaBla-Quest",
-    description: "BlaBlaquest est le projet de fin de formation que j'ai éffectué en groupe. J'était dans l'équipe front-end. Nous étions en total autonomie, de la conception a la mise en production. Nous avons travaillé en 4 sprint d'une semaine, le projet a donc durée un mois. Il est fait en React pour le front et Symfony pour le back."
+    description: "BlaBlaquest est le projet de fin de formation que j'ai éffectué en groupe. J'était dans l'équipe front-end. Nous étions en total autonomie, de la conception a la mise en production. Nous avons travaillé en 4 sprints d'une semaine, le projet a donc duré un mois. Il est fait en React pour le front et Symfony pour le back."
   },
   {
     id: 1,
@@ -46,7 +46,7 @@ const datas = [
     icon: portfolioIcon,
     link: "Vous êtes déja dessus :)",
     githubLink: "https://github.com/Erwann-M/my-portfolio",
-    description: "Le portfolio sur lequel vous êtes. Je l'ai réalisé en jsx, React, sass. J'ai mis environ 1 mois à le réaliser. Il mérite encore quelques améliorations et elles viendront. Si vous cherchez bien (et si vous en avez le temps) des petits easters eggs s'y cache. ;)",
+    description: "Le portfolio sur lequel vous êtes. Je l'ai réalisé en jsx, React, sass. J'ai mis environ 1 mois à le réaliser. Il mérite encore quelques améliorations et elles viendront. Si vous cherchez bien (et si vous en avez le temps) des petits easters eggs s'y cachent. ;)",
   },
   {
     id: 3,
@@ -90,13 +90,13 @@ const datas = [
   },
   {
     id: 7,
-    title: "Calcule imc",
+    title: "Calcul imc",
     titleSlug: "calcul_imc",
     image: imcImg,
     icon: imcIcon,
     link: "pas de lien",
     githubLink: "https://github.com/Erwann-M/calcule_imc",
-    description: "Un défi en PHP : \"40 minutes pour coder un truc \". Réaliser en parallèle de la formation.",
+    description: "Un défi en PHP : \"40 minutes pour coder un truc \". Réalisé en parallèle de la formation.",
   },
   {
     id: 8,

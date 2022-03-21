@@ -27,7 +27,7 @@ const AboutMe = () => {
       </p>
 
       <p className='about-me__content'>
-        J'ai beaucoup voyagé, car avant de me sédentariser en mars 2022, j'ai parcouru les routes de France et d'Europe pendant 5 ans. Je vivais en camping-car et j'allais là ou la curiosité et les rencontres m'emmenais. Je suis de ce fait très sociable. J'aime aider les autres et partager avec eux.
+        J'ai beaucoup voyagé, car avant de me sédentariser en mars 2022, j'ai parcouru les routes de France et d'Europe pendant 5 ans. Je vivais en camping-car et j'allais là oú la curiosité et les rencontres m'emmenaient. Je suis de ce fait très sociable. J'aime aider les autres et partager avec eux.
       </p>
 
       <p className='about-me__content'>
