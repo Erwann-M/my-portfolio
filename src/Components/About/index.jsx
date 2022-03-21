@@ -85,8 +85,8 @@ const About = () => {
           <div className="about__content__header__profile">
             <img className="about__content__header__profile__image" src={profilePicture} alt="Moi" />
             <div className="about__content__header__profile__details">
-              <p className="about__content__header__profile__details--lastname">Martin</p>
-              <p className="about__content__header__profile__details--name">Erwann</p>
+              <p className="about__content__header__profile__details--lastname"><strong>Martin</strong></p>
+              <p className="about__content__header__profile__details--name"><strong>Erwann</strong></p>
               <p className="about__content__header__profile__details--birthday">Né le 02/05/1992</p>
               <p className="about__content__header__profile__details--status">Administrateur</p>
             </div>
