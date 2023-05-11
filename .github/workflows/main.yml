@@ -22,7 +22,7 @@ jobs:
         run: yarn install
 
       - name: Build
-        run: yarn build
+        run: CI=False yarn build
 
       - name: Upload to Server
         uses: appleboy/scp-action@master
