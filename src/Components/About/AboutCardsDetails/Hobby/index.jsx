@@ -79,6 +79,38 @@ const Hobby = () => {
         </div>
       </div>
 
+      <div className="hobby__container electronic">
+        <div className="hobby__container__effect">
+          <p className="hobby__container__text">
+            Électronique
+          </p>
+        </div>
+      </div>
+
+      <div className="hobby__container robotic">
+        <div className="hobby__container__effect">
+          <p className="hobby__container__text">
+            Robotique
+          </p>
+        </div>
+      </div>
+
+      <div className="hobby__container printer">
+        <div className="hobby__container__effect">
+          <p className="hobby__container__text">
+            Impression 3D
+          </p>
+        </div>
+      </div>
+
+      <div className="hobby__container ia">
+        <div className="hobby__container__effect">
+          <p className="hobby__container__text">
+            Intelligence artificielle
+          </p>
+        </div>
+      </div>
+
     </div>
   )
 };

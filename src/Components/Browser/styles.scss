@@ -11,6 +11,7 @@
   border-radius: 10px;
   -webkit-box-shadow: 0px 0px 14px 2px #000000; 
   box-shadow: 0px 0px 14px 2px #000000;
+  overflow: hidden;
   animation: scale 0.3s ease-in-out;
 
   &__title-bar {

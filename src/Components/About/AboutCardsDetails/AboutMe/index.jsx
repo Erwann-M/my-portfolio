@@ -27,7 +27,7 @@ const AboutMe = () => {
       </p>
 
       <p className='about-me__content'>
-        J'ai beaucoup voyagé, car avant de me sédentariser en mars 2022, j'ai parcouru les routes de France et d'Europe pendant 5 ans. Je vivais en camping-car et j'allais là ou la curiosité et les rencontres m'emmenais. Je suis de ce fait très sociable. J'aime aider les autres et partager avec eux.
+        J'ai beaucoup voyagé, car avant de me sédentariser en mars 2022, j'ai parcouru les routes de France et d'Europe pendant 5 ans. Je vivais en camping-car et j'allais là oú la curiosité et les rencontres m'emmenaient. Je suis de ce fait très sociable. J'aime aider les autres et partager avec eux.
       </p>
 
       <p className='about-me__content'>
@@ -47,11 +47,27 @@ const AboutMe = () => {
       </p>
 
       <p className='about-me__content'>
-        D'abord autodidacte, j'ai appris le python, le html, le css et le PHP. Puis je me suis lancé dans une formation de développeur web et web mobile chez O'clock. Le cursus général était le html/css/php, un peu de javascript et une spécialisation en React.
+        D'abord autodidacte, j'ai appris le python, le html, le css et le PHP. Puis je me suis lancé (en juillet 2021) dans une formation de développeur web et web mobile chez O'clock. Le cursus général était le html/css/php/javascript et une spécialisation en React pendant 1 mois.
       </p>
 
       <p className='about-me__content'>
-        J'ai pu apprendre, lors de cette formation, la technique bien sûr, mais aussi le savoir être en entreprise et comment travailler en équipe. On nous a appris à apprendre et ça, c'est le plus beau cadeau du monde !
+        J'ai pu apprendre, lors de cette formation, la technique bien sûr, mais aussi le savoir être en entreprise et comment travailler en équipe. On nous a appris à apprendre et ça, c'est le plus beau cadeau du monde!
+      </p>
+
+      <p className='about-me__content'>
+        Ma formation c'est terminé en décembre 2021. J'avais à cette époque envie de découvrir et d'habiter dans une nouvelle région. Mon regard c'est porté sur les Côtes d'Armor. J'ai donc décidé de m'y installer en mars 2022. Très vite, j'ai trouvé mon premier emploi de développeur. J'ai commencé en mai 2022 chez SII Group à Lannion. J'y suis d'ailleurs toujours en poste.
+      </p>
+
+      <p className='about-me__content'>
+        Cette expérience m'a beaucoup apporté. Pendant cette période, j'ai pu me rendre compte de mes compétences, prendre confiance en moi, mes capacités techniques et relationnelles. J'ai rapidement été à l'aise malgré le fait que la stack technique ne me correspondais pas.
+      </p>
+
+      <p className='about-me__content'>
+        Aujourd'hui, après une grosse remise en question, je me rends compte que ma région de cœur me manque énormément. C'est pourquoi je souhaite revenir en Haute-Savoie, et plus particulièrement dans la région d'Annecy, ou j'ai tous mes amis et un peu de famille.
+      </p>
+
+      <p className='about-me__content'>
+        Je suis donc à la recherche d'un emploi dans cette région. Je suis ouvert à toutes propositions, j'ai une très grosse appétence pour le front-end, mais je sais m'adapter et j'aime apprendre de nouvelles choses.
       </p>
 
       <p className='about-me__content'>

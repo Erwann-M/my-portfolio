@@ -56,7 +56,7 @@ const HomeProfile = () => {
       <div className="home-profile__container">
 
         <img src={profilePicture} alt="profil" className='home-profile__picture' title="Ça ? c'est moi !" />
-        <h1 className='home-profile__name'>Erwann Martin</h1>
+        <h1 className='home-profile__name'><strong>Erwann Martin</strong></h1>
 
         <form action="" className='home-profile__form' onSubmit={handleSubmit}>
           <input id='pass' type="password" className='home-profile__form__input' placeholder="Écrivez 4 caractères" title='Mettez ce que vous voulez' onChange={handleChange} />

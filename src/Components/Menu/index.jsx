@@ -114,7 +114,7 @@ const Menu = () => {
           <NavLink to={"/"} className="menu__pin-nav">
             <div className="menu__bottom__profile" onClick={handleClickAbout}>
               <img className="menu__bottom__profile-image" src={profilePicture} alt="À propos de moi" />
-              <p className="menu__bottom__profile-title">Martin Erwann</p>
+              <p className="menu__bottom__profile-title"><strong>Martin Erwann</strong></p>
             </div>
 
           </NavLink>
