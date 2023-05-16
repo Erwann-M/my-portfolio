@@ -14,6 +14,11 @@
 }
 
 @font-face {
+  font-family: 'roboto-bold';
+  src: url(../assets/font/Roboto/Roboto-Bold.ttf);
+}
+
+@font-face {
   font-family: "win95";
   src: url(../assets/font/W95FA/w95fa.woff);
 }
@@ -21,5 +26,6 @@
 $font-medium: 'roboto-medium';
 $font-regular: 'roboto-regular';
 $font-thin: 'roboto-thin';
+$font-bold: 'roboto-bold';
 
 $font-win: 'win95';
