@@ -15,7 +15,7 @@ const Study = () => {
   }
   
   return (
-    <div className={"study " + (studyToggled && "active")} onClick={handleClickStudy}>
+    <section className={"study " + (studyToggled && "active")} onClick={handleClickStudy}>
 
       <div className="study__card">
         <img src={oclock} alt="" className="study__card__image" />
@@ -36,7 +36,7 @@ const Study = () => {
         <img src={openClassRoom} alt="" className="study__card__image" />
         <p className="study__card__text">OpenClassRoom: certificat de réussite Comprendre le web</p>
       </div>
-    </div>
+    </section>
   )
 };
 

@@ -17,14 +17,14 @@ const Work = () => {
   }
   
   return (
-    <div className={"work " + (workToggled && "active")} onClick={handleClickWork}>
+    <section className={"work " + (workToggled && "active")} onClick={handleClickWork}>
       <p className="work__text">
         Je sors de ma formation développeur web et web mobile chez O'clock, je n'ai donc pas d'expérience professionnelle dans le domaine pour le moment.<br/><br/>Cependant, j'ai réalisé quelques projets personnels pendant celle-ci et je vous invite a aller les découvrir dans <span className="work__text__link" onClick={handleClickProject}>L'explorateur de projets</span>
       </p>
 
       <p className="work__text">Sait-on jamais, peut-être que ce sera votre entreprise qui sera ma première expérience...</p>
       
-    </div>
+    </section>
   )
 };
 
