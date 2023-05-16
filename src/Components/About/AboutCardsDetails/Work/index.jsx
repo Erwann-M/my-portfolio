@@ -2,7 +2,7 @@ import siiLogo from '../../../../assets/icons/SII_Logo.png';
 import bouyguesLogo from '../../../../assets/icons/bouygues.png';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleProjectExplorer, toggleWork } from '../../../../action';
+import { toggleWork } from '../../../../action';
 import './styles.scss';
 
 const Work = () => {
@@ -10,10 +10,6 @@ const Work = () => {
   const { workToggled } = useSelector(state => state);
 
   const dispatch = useDispatch()
-
-  const handleClickProject = () => {
-    dispatch(toggleProjectExplorer());
-  };
   
   const handleClickWork = () => {
     dispatch(toggleWork());
