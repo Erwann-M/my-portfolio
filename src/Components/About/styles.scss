@@ -124,11 +124,18 @@
         }
       }
 
-      &__title {
-        color: white;
-        font-family: vars.$font-medium;
-        font-size: 30px;
+      &__status {
         text-align: center;
+        &__title {
+          color: white;
+          font-family: vars.$font-medium;
+          font-size: 30px;
+        }
+        &__download {
+          color: white;
+          font-family: vars.$font-medium;
+          font-size: 20px;
+        }
       }
     }
 
@@ -220,7 +227,7 @@
         align-items: center;
         justify-content: space-between;
 
-        &__title {
+        &__status {
           margin-right: 25px;
         }
       }
@@ -284,6 +291,13 @@
       &__header {
         margin-left: 50px;
         width: 70%;
+        &__status {
+          &__download {
+            &:hover {
+              color: rgb(168, 168, 168);
+            }
+          }
+        }
       }
 
       &__card {

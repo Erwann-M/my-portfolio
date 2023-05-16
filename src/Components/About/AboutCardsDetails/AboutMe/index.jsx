@@ -13,7 +13,7 @@ const AboutMe = () => {
   }
 
   return (
-    <div className={"about-me " + (aboutMeToggled && "active")} onClick={handleClickAboutMe}>
+    <section className={"about-me " + (aboutMeToggled && "active")} onClick={handleClickAboutMe}>
       <p className='about-me__content'>
         Bonjour, moi, c'est <strong>Erwann</strong>.
       </p>
@@ -73,7 +73,7 @@ const AboutMe = () => {
       <p className='about-me__content'>
         Voilà ! C'était un peu long, mais maintenant vous me connaissez un peu mieux.
       </p>
-    </div>
+    </section>
   )
 };
 

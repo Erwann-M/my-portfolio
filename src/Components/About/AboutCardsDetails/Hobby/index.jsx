@@ -13,7 +13,7 @@ const Hobby = () => {
   }
   
   return (
-    <div className={"hobby " + (hobbyToggled && "active")} onClick={handleClickHobby}>
+    <section className={"hobby " + (hobbyToggled && "active")} onClick={handleClickHobby}>
 
       <div className="hobby__container guitar">
         <div className="hobby__container__effect">
@@ -111,7 +111,7 @@ const Hobby = () => {
         </div>
       </div>
 
-    </div>
+    </section>
   )
 };
 

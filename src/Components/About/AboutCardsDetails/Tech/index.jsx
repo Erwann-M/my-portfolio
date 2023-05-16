@@ -11,6 +11,17 @@ import sass from "../../../../assets/icons/sass.png";
 import ts from "../../../../assets/icons/ts.png";
 import redux from "../../../../assets/icons/redux.png";
 import github from "../../../../assets/icons/github.png";
+import gitlab from "../../../../assets/icons/gitlab.png";
+import jenkins from "../../../../assets/icons/jenkins.png";
+import itest from "../../../../assets/icons/itest.png";
+import django from "../../../../assets/icons/django.png";
+import flask from "../../../../assets/icons/flask.png";
+import vnc from "../../../../assets/icons/vnc.png";
+import rdp from "../../../../assets/icons/rdp.png";
+import virtualbox from "../../../../assets/icons/virtualbox.png";
+import mongodb from "../../../../assets/icons/mongodb.png";
+import mysql from "../../../../assets/icons/mysql.png";
+import groovy from "../../../../assets/icons/groovy.png";
 import './styles.scss';
 import { toggleTech } from '../../../../action';
 
@@ -28,7 +39,7 @@ const Tech = () => {
     <div className={"tech " + (techToggled && "active")} onClick={handleClickTech}>
 
       <div className="tech__container-left">
-        <h2 className="tech__title">Technologies:</h2>
+        <h2 className="tech__title">Technologies/Languages:</h2>
         <div className="tech__card">
           <img src={html} alt="" className="tech__card__image" />
           <p className="tech__card__text">HTML</p>
@@ -63,6 +74,39 @@ const Tech = () => {
           <img src={python} alt="" className="tech__card__image" />
           <p className="tech__card__text">Python</p>
         </div>
+        
+        <div className="tech__card">
+          <img src={groovy} alt="" className="tech__card__image" />
+          <p className="tech__card__text">Groovy script</p>
+        </div>
+
+        <h2 className="tech__title">Outils d'automatisation:</h2>
+        <div className="tech__card">
+          <img src={jenkins} alt="" className="tech__card__image" />
+          <p className="tech__card__text">Jenkins</p>
+        </div>
+
+        <div className="tech__card">
+          <img src={itest} alt="" className="tech__card__image" />
+          <p className="tech__card__text">Itest</p>
+        </div>
+
+        <h2 className="tech__title">Virtualisation:</h2>
+        
+        <div className="tech__card">
+          <img src={vnc} alt="" className="tech__card__image" />
+          <p className="tech__card__text">Vnc</p>
+        </div>
+
+        <div className="tech__card">
+          <img src={rdp} alt="" className="tech__card__image" />
+          <p className="tech__card__text">Remote desktop connection</p>
+        </div>
+        
+        <div className="tech__card">
+          <img src={virtualbox} alt="" className="tech__card__image" />
+          <p className="tech__card__text">Virtual Box</p>
+        </div>
       </div>
 
       <div className="tech__container__right">
@@ -82,6 +126,16 @@ const Tech = () => {
           <p className="tech__card__text">Bootstrap</p>
         </div>
 
+        <div className="tech__card">
+          <img src={django} alt="" className="tech__card__image" />
+          <p className="tech__card__text">Django</p>
+        </div>
+
+        <div className="tech__card">
+          <img src={flask} alt="" className="tech__card__image" />
+          <p className="tech__card__text">Flask</p>
+        </div>
+
         <h2 className="tech__title">Versionning:</h2>
         <div className="tech__card">
           <img src={git} alt="" className="tech__card__image" />
@@ -91,6 +145,23 @@ const Tech = () => {
         <div className="tech__card">
           <img src={github} alt="" className="tech__card__image" />
           <p className="tech__card__text">Github</p>
+        </div>
+
+        <div className="tech__card">
+          <img src={gitlab} alt="" className="tech__card__image" />
+          <p className="tech__card__text">GitLab</p>
+        </div>
+
+        <h2 className="tech__title">Base de données:</h2>
+        
+        <div className="tech__card">
+          <img src={mongodb} alt="" className="tech__card__image" />
+          <p className="tech__card__text">MongoDB</p>
+        </div>
+        
+        <div className="tech__card">
+          <img src={mysql} alt="" className="tech__card__image" />
+          <p className="tech__card__text">MySQL</p>
         </div>
       </div>
     </div>
