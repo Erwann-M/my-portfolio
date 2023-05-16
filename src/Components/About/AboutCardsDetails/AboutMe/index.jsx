@@ -51,7 +51,7 @@ const AboutMe = () => {
       </p>
 
       <p className='about-me__content'>
-        J'ai pu apprendre, lors de cette formation, la technique bien sûr, mais aussi le savoir être en entreprise et comment travailler en équipe. On nous a appris à apprendre et ça, c'est le plus beau cadeau du monde !
+        J'ai pu apprendre, lors de cette formation, la technique bien sûr, mais aussi le savoir être en entreprise et comment travailler en équipe. On nous a appris à apprendre et ça, c'est le plus beau cadeau du monde!
       </p>
 
       <p className='about-me__content'>
