@@ -81,6 +81,30 @@
       background-position: center;
       background-size: cover;
     }
+
+    &.robotic {
+      background: url(../../../../assets/img/hobby/robots.jpg) no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    &.electronic {
+      background: url(../../../../assets/img/hobby/electronic.jpg) no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    &.printer {
+      background: url(../../../../assets/img/hobby/imprimante-3d.png) no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    &.ia {
+      background: url(../../../../assets/img/hobby/ia.jpg) no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
   }
 }
 
