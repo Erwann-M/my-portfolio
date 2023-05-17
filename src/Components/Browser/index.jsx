@@ -41,13 +41,13 @@ const Browser = () => {
       </div>
 
       <div className="browser__content">
-        <iframe className="browser__content__web-page" title='Google' src="https://karmasearch.org/" >
+        <iframe className="browser__content__web-page" title='Google' src="https://www.legorafi.fr/" >
         </iframe>
       </div>
     </div>
   )
 };
 
-// https://www.google.com/webhp?igu=1
+// https://karmasearch.org/
 
 export default Browser;
