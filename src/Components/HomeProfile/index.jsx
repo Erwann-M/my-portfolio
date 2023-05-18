@@ -63,7 +63,7 @@ const HomeProfile = () => {
         </form>
 
         {/* --------------- provisoire --------------- */}
-        <p className='home-profile__mobile-alert__second'>La version mobile du portfolio est en maintenance dû à une mise à jours des navigateurs. Connectez vous depuis un ordinateur ou une tablette en attendant le retour de la version mobile.</p>
+        {/* <p className='home-profile__mobile-alert__second'>La version mobile du portfolio est en maintenance dû à une mise à jours des navigateurs. Connectez vous depuis un ordinateur ou une tablette en attendant le retour de la version mobile.</p> */}
 
       </div>
 

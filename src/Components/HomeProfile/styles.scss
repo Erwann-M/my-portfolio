@@ -8,15 +8,15 @@
 
     font-family: vars.$font-medium;
     color: black;
-    &__second {
-      margin-left: 5px;
-      margin-right: 5px;
-      font-family: vars.$font-bold;
-      color: rgb(253, 253, 253);
-      padding: 5px;
-      background-color: #0000005b;
-      border-radius: 5px;
-    }
+    // &__second {
+    //   margin-left: 5px;
+    //   margin-right: 5px;
+    //   font-family: vars.$font-bold;
+    //   color: rgb(253, 253, 253);
+    //   padding: 5px;
+    //   background-color: #0000005b;
+    //   border-radius: 5px;
+    // }
   }
 
   &__container {
@@ -58,7 +58,7 @@
       padding-left: 0.5rem;
       margin-bottom: 1rem;
       // ----------------provisoire---------------- 
-      pointer-events: none;
+      // pointer-events: none;
 
       &:focus {
         border: 2px solid #737f96;
@@ -103,14 +103,14 @@
 @media (min-width: 425px) {
   .home-profile {
     &__mobile-alert {
-      &__second {
-        display: none;
-      }
+      // &__second {
+      //   display: none;
+      // }
     }
     &__form {
       &__input {
         // ----------------provisoire---------------- 
-        pointer-events: auto;
+        // pointer-events: auto;
       }
     }
   }
@@ -124,14 +124,14 @@
         width: 15rem;
         font-size: 0.9rem;
         // ----------------provisoire---------------- 
-        pointer-events: auto;
+        // pointer-events: auto;
       }
     }
     &__mobile-alert {
       display: none;
-      &__second {
-        display: none;
-      }
+      // &__second {
+      //   display: none;
+      // }
     }
 
     &__info {
