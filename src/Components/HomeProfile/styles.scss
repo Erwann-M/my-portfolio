@@ -100,6 +100,22 @@
 
 }
 
+@media (min-width: 425px) {
+  .home-profile {
+    &__mobile-alert {
+      &__second {
+        display: none;
+      }
+    }
+    &__form {
+      &__input {
+        // ----------------provisoire---------------- 
+        pointer-events: auto;
+      }
+    }
+  }
+}
+
 @media (min-width: 1024px) {
   .home-profile {
     &__form {
