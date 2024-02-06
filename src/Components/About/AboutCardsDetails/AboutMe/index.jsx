@@ -55,7 +55,7 @@ const AboutMe = () => {
       </p>
 
       <p className='about-me__content'>
-        Ma formation c'est terminé en décembre 2021. J'avais à cette époque envie de découvrir et d'habiter dans une nouvelle région. Mon regard c'est porté sur les Côtes d'Armor. J'ai donc décidé de m'y installer en mars 2022. Très vite, j'ai trouvé mon premier emploi de développeur. J'ai commencé en mai 2022 chez SII Group à Lannion. J'y suis d'ailleurs toujours en poste.
+        Ma formation c'est terminé en décembre 2021. J'avais à cette époque envie de découvrir et d'habiter dans une nouvelle région. Mon regard c'est porté sur les Côtes d'Armor. J'ai donc décidé de m'y installer en mars 2022. Très vite, j'ai trouvé mon premier emploi de développeur. J'ai commencé en mai 2022 chez SII Group à Lannion et j'ai démissionné en octobre 2023 pour me mettre en freelance.
       </p>
 
       <p className='about-me__content'>
@@ -63,11 +63,11 @@ const AboutMe = () => {
       </p>
 
       <p className='about-me__content'>
-        Aujourd'hui, après une grosse remise en question, je me rends compte que ma région de cœur me manque énormément. C'est pourquoi je souhaite revenir en Haute-Savoie, et plus particulièrement dans la région d'Annecy, ou j'ai tous mes amis et un peu de famille.
+        Aujourd'hui, après une grosse remise en question, je me rends compte que le status de salarié ne me correspond plus. C'est pourquoi j'ai ouvert ma micro-entreprise en janvier 2024 pour pouvoir effectuer des missions de freelance, afin d'exploré différents domaines, différentes stack et outils et ainsi nourrir ma curiosité. Cela me permet également de prendre du temps pour développer mes propres projet, laissé trop longtemps de côté.
       </p>
 
       <p className='about-me__content'>
-        Je suis donc à la recherche d'un emploi dans cette région. Je suis ouvert à toutes propositions, j'ai une très grosse appétence pour le front-end, mais je sais m'adapter et j'aime apprendre de nouvelles choses.
+        Je suis donc à la recherche de mission de freelance. N'hésitez pas à consulter mon profil Malt ici: <a className='malt-link' href='https://www.malt.fr/profile/erwannmartin' target='blanck'>https://www.malt.fr/profile/erwannmartin</a> afin de voir si je suis disponible. Je suis ouvert à toutes propositions, j'ai une très grosse appétence pour le front-end, mais je sais m'adapter et j'aime apprendre de nouvelles choses. J'aide les petites/moyennes entreprises à avoir une présence sur internet grâce à un site vitrine proffessionnel.
       </p>
 
       <p className='about-me__content'>

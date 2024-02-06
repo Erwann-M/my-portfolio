@@ -19,6 +19,16 @@
   }
 }
 
+.malt-link {
+  text-decoration: none;
+  color: #4592d1;
+}
+
+.malt-link:hover {
+  text-decoration: underline;
+  color: #81b1d8;
+}
+
 @media (min-width: 768px) {
   .about-me {
     &.active {
