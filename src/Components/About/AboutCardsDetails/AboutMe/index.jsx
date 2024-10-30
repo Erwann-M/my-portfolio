@@ -43,7 +43,7 @@ const AboutMe = () => {
       </p>
 
       <p className='about-me__content'>
-        Dès les premières lignes de codes, j'ai su que j'avais enfin trouvé mon "truc", MA forme d'expression. C'est à partir de là que j'ai décidé que j'en ferais mon métier, peut importe ce que cela me coutera.
+        Dès les premières lignes de codes, j'ai su que j'avais enfin trouvé mon "truc", MA forme d'expression. C'est à partir de là que j'ai décidé que j'en ferais mon métier, peu importe ce que cela me coûtera.
       </p>
 
       <p className='about-me__content'>
