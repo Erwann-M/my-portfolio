@@ -37,7 +37,6 @@ const HomeProfile = () => {
     evt.preventDefault();
   }
   
-
   // for update time in real time
   useEffect(
     () => {

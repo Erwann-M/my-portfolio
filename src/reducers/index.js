@@ -49,7 +49,7 @@ const reducer = (state = initialState, action = {}) => {
     case GET_TIME:
       return {
         ...state,
-        time: new Date().toLocaleTimeString(),
+        time: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
       };
     case GET_DATE:
       return {
