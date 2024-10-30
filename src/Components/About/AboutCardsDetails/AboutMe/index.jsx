@@ -43,11 +43,11 @@ const AboutMe = () => {
       </p>
 
       <p className='about-me__content'>
-        Dès les premières lignes de codes, j'ai su que j'avais enfin trouvé mon "truc". C'est à partir de là que j'ai décidé que j'en ferais mon métier.
+        Dès les premières lignes de codes, j'ai su que j'avais enfin trouvé mon "truc", MA forme d'expression. C'est à partir de là que j'ai décidé que j'en ferais mon métier, peu importe ce que cela me coûtera.
       </p>
 
       <p className='about-me__content'>
-        D'abord autodidacte, j'ai appris le python, le html, le css et le PHP. Puis je me suis lancé (en juillet 2021) dans une formation de développeur web et web mobile chez O'clock. Le cursus général était le html/css/php/javascript et une spécialisation en React pendant 1 mois.
+        D'abord autodidacte, j'ai appris le python, le html, le css et le PHP. Puis je me suis lancé (en juillet 2021) dans une formation de développeur web et web mobile chez O'clock. Le cursus général était le html/css/php/javascript suivit d'une spécialisation en React.
       </p>
 
       <p className='about-me__content'>
@@ -55,19 +55,31 @@ const AboutMe = () => {
       </p>
 
       <p className='about-me__content'>
-        Ma formation c'est terminé en décembre 2021. J'avais à cette époque envie de découvrir et d'habiter dans une nouvelle région. Mon regard c'est porté sur les Côtes d'Armor. J'ai donc décidé de m'y installer en mars 2022. Très vite, j'ai trouvé mon premier emploi de développeur. J'ai commencé en mai 2022 chez SII Group à Lannion et j'ai démissionné en octobre 2023 pour me mettre en freelance.
+        Ma formation c'est terminé en décembre 2021. J'avais à cette époque envie de découvrir et d'habiter dans une nouvelle région. Mon regard c'est porté sur les Côtes d'Armor. J'ai donc décidé de m'y installer en mars 2022. Très vite, j'ai trouvé mon premier emploi de développeur. J'ai commencé en mai 2022 chez SII Group à Lannion. Sur un projet de création de campagne de test pour les réseaux internet et télécoms. 
       </p>
 
       <p className='about-me__content'>
-        Cette expérience m'a beaucoup apporté. Pendant cette période, j'ai pu me rendre compte de mes compétences, prendre confiance en moi, mes capacités techniques et relationnelles. J'ai rapidement été à l'aise malgré le fait que la stack technique ne me correspondais pas.
+        Pour cette mission, j'ai dû apprendre de nouveaux langages et frameworks (Python, Django, Flask, Tcl, Groovy Script, Bash, etc.) ainsi que divers outils (Jenkins, Itest, Jira, virtualisation, MongoDB). Ces technologies m'étaient totalement inconnues, mais je les ai rapidement maîtrisées, et en un mois, j’étais déjà autonome. 
       </p>
 
       <p className='about-me__content'>
-        Aujourd'hui, après une grosse remise en question, je me rends compte que le status de salarié ne me correspond plus. C'est pourquoi j'ai ouvert ma micro-entreprise en janvier 2024 pour pouvoir effectuer des missions de freelance, afin d'exploré différents domaines, différentes stack et outils et ainsi nourrir ma curiosité. Cela me permet également de prendre du temps pour développer mes propres projet, laissé trop longtemps de côté.
+        Cette expérience m'a beaucoup apporté. Pendant cette période, j'ai pu me rendre compte de mes compétences, prendre confiance en moi, mes capacités techniques, d'apprentissage et relationnelles. J'ai rapidement été à l'aise malgré le fait que le projet ne me correspondais pas.
       </p>
 
       <p className='about-me__content'>
-        Je suis donc à la recherche de mission de freelance. N'hésitez pas à consulter mon profil Malt ici: <a className='malt-link' href='https://www.malt.fr/profile/erwannmartin' target='blanck'>https://www.malt.fr/profile/erwannmartin</a> afin de voir si je suis disponible. Je suis ouvert à toutes propositions, j'ai une très grosse appétence pour le front-end, mais je sais m'adapter et j'aime apprendre de nouvelles choses. J'aide les petites/moyennes entreprises à avoir une présence sur internet grâce à un site vitrine proffessionnel.
+        En Novembre 2023, j'ai démissionné. Pour suivre ma conjointe dans une nouvelle région pour un nouveau projet proffessionnel. En janvier 2024, nous nous sommes séparé. Pour prendre du recul sur cette situation, j'ai décidé de partir en voyage en sac à dos. Je me suis rapidement arrêter en Haute Savoie, à Faverges. Ou j'ai retrouver mes amis. J'ai trouver un appartement en Septembre 2024.
+      </p>
+
+      <p className='about-me__content'>
+        Aujourd'hui, je suis bien implanter en Haute Savoie, et je compte y rester. C'est pourquoi, je souhaite retrouver un emploi afin de poursuivre ma carrière. Mais cette fois dans LE domaine qui me plait vraiment : Le developpement Web. Je suis autant attiré par le front-end, pour l’aspect esthétique et la conception d’interfaces fluides et intuitives, que par le back-end, pour son approche de robustesse et de sécurité.
+      </p>
+
+      <p className='about-me__content'>
+        Je n’ai pas de technologie en particulier que je cherche à apprendre, car chacune a ses avantages et ses inconvénients en fonction du contexte d’utilisation. Je suis donc complètement ouvert à découvrir de nouvelles choses. Entre nous, le métier de développeur, ce n’est pas de connaître un langage par cœur, mais de trouver des solutions aux problèmes. C’est d’apprendre en continu pour produire un code propre, optimisé et maintenable, tout en sachant rechercher rapidement les informations nécessaires pour répondre au mieux aux attentes du client. 
+      </p>
+
+      <p className='about-me__content'>
+        Alors, si vous cherchez un jeune développeur ultra motivé, avec une grande capacité d’apprentissage et d’adaptation, et si vous êtes prêt à prendre le pari de me donner ma chance, je suis convaincu que ce sera une excellente décision sur le long terme. C’est souvent en osant prendre des risques que l’on vit les expériences les plus enrichissantes.
       </p>
 
       <p className='about-me__content'>
