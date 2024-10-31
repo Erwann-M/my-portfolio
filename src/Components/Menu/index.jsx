@@ -5,7 +5,6 @@ import browser from '../../assets/icons/chrome.png';
 import explorerIcon from '../../assets/icons/explorer.png';
 import emailIcon from '../../assets/icons/gmail.png';
 import linkedin from '../../assets/icons/linkedin.png';
-import twitter from '../../assets/icons/twitter.png';
 import github from '../../assets/icons/github.png';
 import profile from '../../assets/icons/user.png';
 import profilePicture from '../../assets/img/pp.jpg';
@@ -76,17 +75,12 @@ const Menu = () => {
             </div>
           </NavLink>
           
-          <a href='https://www.linkedin.com/in/erwann-martin/' className="menu__pin__container">
+          <a href='https://www.linkedin.com/in/erwann-martin/' className="menu__pin__container" target='blank'>
             <img src={linkedin} alt="Mon profil linkedIn" className="menu__pin__container-icon" />
             <p className='menu__pin__container-title'>LinkedIn</p>
           </a>
-        
-          <a href="https://twitter.com/ErwannMartin3" className="menu__pin__container">
-            <img src={twitter} alt="Mon profil twitter" className="menu__pin__container-icon" />
-            <p className='menu__pin__container-title'>Twitter</p>
-          </a>
 
-          <a href='https://github.com/Erwann-M' className="menu__pin__container">
+          <a href='https://github.com/Erwann-M' className="menu__pin__container" target='blank'>
             <img src={github} alt="Mon profil github" className="menu__pin__container-icon" />
             <p className='menu__pin__container-title'>GitHub</p>
           </a>
