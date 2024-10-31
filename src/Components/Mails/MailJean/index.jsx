@@ -12,7 +12,7 @@ const MailJean = () => (
     </div>
     <h3 className="mail__object">Coucou</h3>
     <p className="mail__content">
-      JOYEUX NOËL !!!
+      JOYEUX NOËL !!!🎅🎄
     </p>
   </div>
 );

@@ -13,9 +13,9 @@ const MailAlex = () => (
     <h3 className="mail__object">Mission pour toi</h3>
     <p className="mail__content">
       Salut <strong>Erwann</strong>, j'ai une petite mission de dev pour toi !<br/><br/>
-      Pourrais-tu me faire un site pour ma boulangerie ?<br/>
+      Pourrais-tu me faire un site pour ma boulangerie ?🥐<br/>
       Je souhaite faire la promotion de certains produits sur celui-ci.<br/><br/>
-      Et aussi : bon anniversaire !!!<br/><br/>
+      Et aussi : bon anniversaire !!!🎂<br/><br/>
       À très vite !
     </p>
   </div>
