@@ -58,7 +58,7 @@ const HomeProfile = () => {
         <h1 className='home-profile__name'><strong>Erwann Martin</strong></h1>
 
         <form action="" className='home-profile__form' onSubmit={handleSubmit}>
-          <input id='pass' type="password" className='home-profile__form__input' placeholder="Écrivez 4 caractères" title='Mettez ce que vous voulez' onChange={handleChange} />
+          <input id='pass' type="password" className='home-profile__form__input' placeholder="Écrivez 4 caractères au hasard" title='Mettez ce que vous voulez' onChange={handleChange} />
         </form>
 
       </div>
