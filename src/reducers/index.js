@@ -3,7 +3,7 @@
 |*==================================================================*/
 
 import { Navigate } from "react-router";
-import {GET_DATE, GET_TIME, INCREMENT_ERROR_COUNTER, SET_LOGIN, TOGGLE_ABOUT, TOGGLE_ABOUT_ME, TOGGLE_BURGER_MENU, TOGGLE_CONTACT, TOGGLE_EXPERIENCES, TOGGLE_HOBBY, TOGGLE_MENU, TOGGLE_PROJECT_EXPLORER, TOGGLE_STUDY, TOGGLE_TECH, TOGGLE_WORK, UNSET_LOGIN, TOGGLE_MAXIMIZE, TOGGLE_BROWSER, TOGGLE_NAVBAR_ARROW, TOGGLE_DEFENDER, TOGGLE_NETWORK_INFO, CHANGE_LUMINOSITY, CHANGE_SOUND, TOGGLE_WIFI, TOGGLE_BLUETOOTH, TOGGLE_FLY_MODE, TOGGLE_TRASH, TOGGLE_ERROR } from "../action";
+import {GET_DATE, GET_TIME, INCREMENT_ERROR_COUNTER, SET_LOGIN, TOGGLE_ABOUT, TOGGLE_ABOUT_ME, TOGGLE_BURGER_MENU, TOGGLE_CONTACT, TOGGLE_EXPERIENCES, TOGGLE_HOBBY, TOGGLE_MENU, TOGGLE_PROJECT_EXPLORER, TOGGLE_STUDY, TOGGLE_TECH, TOGGLE_WORK, UNSET_LOGIN, TOGGLE_MAXIMIZE, TOGGLE_BROWSER, TOGGLE_REACTION_GAME, TOGGLE_NAVBAR_ARROW, TOGGLE_DEFENDER, TOGGLE_NETWORK_INFO, CHANGE_LUMINOSITY, CHANGE_SOUND, TOGGLE_WIFI, TOGGLE_BLUETOOTH, TOGGLE_FLY_MODE, TOGGLE_TRASH, TOGGLE_ERROR } from "../action";
 
 const initialState = {
   loggedIn: false,
@@ -16,6 +16,7 @@ const initialState = {
   burgerMenuToggled: false,
   aboutToggled: false,
   browserToggled: false,
+  reactionGameToggled: false,
   trashToggled: false,
 
   errorCounter: 0,
@@ -81,6 +82,7 @@ const reducer = (state = initialState, action = {}) => {
           aboutToggled:false,
           maximizeToggled: false,
           browserToggled: false,
+          reactionGameToggled: false,
         };
       case INCREMENT_ERROR_COUNTER:
         return {
@@ -96,6 +98,7 @@ const reducer = (state = initialState, action = {}) => {
           aboutToggled:false,
           maximizeToggled: false,
           browserToggled: false,
+          reactionGameToggled: false,
         };
       case TOGGLE_BURGER_MENU:
         return {
@@ -106,6 +109,18 @@ const reducer = (state = initialState, action = {}) => {
         return {
           ...state,
           browserToggled: !state.browserToggled,
+          reactionGameToggled: false,
+          menuToggled: false,
+          projectExplorerToggled: false,
+          aboutToggled: false,
+          maximizeToggled: false,
+          contactToggled: false,
+        };
+      case TOGGLE_REACTION_GAME:
+        return {
+          ...state,
+          reactionGameToggled: !state.reactionGameToggled,
+          browserToggled: false,
           menuToggled: false,
           projectExplorerToggled: false,
           aboutToggled: false,
@@ -121,6 +136,7 @@ const reducer = (state = initialState, action = {}) => {
           contactToggled: false,
           maximizeToggled: false,
           browserToggled: false,
+          reactionGameToggled: false,
 
           aboutMeToggled: false,
           techToggled: false,
@@ -219,6 +235,7 @@ const reducer = (state = initialState, action = {}) => {
           maximizeToggled: false,
           contactToggled: false,
           browserToggled: false,
+          reactionGameToggled: false,
         };
       case TOGGLE_ERROR:
         return {

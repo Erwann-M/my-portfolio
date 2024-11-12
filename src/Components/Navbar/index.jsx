@@ -30,6 +30,7 @@ import ProjectExplorer from '../ProjectExplorer';
 import Contact from '../Contact';
 import About from '../About';
 import Browser from '../Browser';
+import ReactionGame from '../ReactionGame';
 import MoreApp from '../MoreApp';
 import Defender from '../Defender';
 import NetworkInfo from '../NetworkInfo';
@@ -40,7 +41,7 @@ const Navbar = () => {
 
   const dispatch = useDispatch();
 
-  const {date, time, menuToggled, projectExplorerToggled, contactToggled, aboutToggled, browserToggled, navbarArrowToggled, defenderToggled, wifiToggled, soundValue, trashToggled, errorToggled} = useSelector(state => state);
+  const {date, time, menuToggled, projectExplorerToggled, contactToggled, aboutToggled, browserToggled, navbarArrowToggled, defenderToggled, wifiToggled, soundValue, trashToggled, errorToggled, reactionGameToggled} = useSelector(state => state);
 
   useEffect(
     () => {
@@ -201,6 +202,7 @@ const Navbar = () => {
       {contactToggled && <Contact />}
       {aboutToggled && <About />}
       {browserToggled && <Browser />}
+      {reactionGameToggled && <ReactionGame />}
       <MoreApp />
       {defenderToggled && <Defender />}
       <NetworkInfo />

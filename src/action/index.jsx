@@ -118,6 +118,12 @@ export const toggleBrowser = () => ({
   type: TOGGLE_BROWSER,
 });
 
+export const TOGGLE_REACTION_GAME = "TOGGLE_REACTION_GAME";
+
+export const toggleReactionGame = () => ({
+  type: TOGGLE_REACTION_GAME,
+});
+
 export const TOGGLE_NAVBAR_ARROW = "TOGGLE_NAVBAR_ARROW";
 
 export const toggleNavbarArrow = () => ({

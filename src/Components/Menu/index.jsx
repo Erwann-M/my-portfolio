@@ -9,13 +9,14 @@ import github from '../../assets/icons/github.png';
 import profile from '../../assets/icons/user.png';
 import profilePicture from '../../assets/img/pp.jpg';
 import onoff from '../../assets/icons/onoff.svg';
+import chrono from '../../assets/icons/chrono.png';
 
 // ----------- image --------------
 
 
 //---------component--------------------
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleProjectExplorer, unsetLogin, toggleContact, toggleAbout, toggleBrowser } from '../../action';
+import { toggleProjectExplorer, unsetLogin, toggleContact, toggleAbout, toggleBrowser, toggleReactionGame } from '../../action';
 import { NavLink } from 'react-router-dom';
 
 
@@ -40,6 +41,10 @@ const Menu = () => {
 
   const handleClickBrowser = () => {
     dispatch(toggleBrowser());
+  }
+
+  const handleClickReactionGame = () => {
+    dispatch(toggleReactionGame());
   }
 
   const handleClickOff = () => {
@@ -89,6 +94,13 @@ const Menu = () => {
             <div className="menu__pin__container" onClick={handleClickAbout}>
               <img src={profile} alt="À propos de moi" className="menu__pin__container-icon" />
               <p className='menu__pin__container-title'>Mon profil</p>
+            </div>
+          </NavLink>
+
+          <NavLink to={"/"} className="menu__pin-nav">
+            <div className="menu__pin__container" onClick={handleClickReactionGame}>
+              <img src={chrono} alt="navigateur internet" className="menu__pin__container-icon" />
+              <p className='menu__pin__container-title'>Reaction Game</p>
             </div>
           </NavLink>
 
