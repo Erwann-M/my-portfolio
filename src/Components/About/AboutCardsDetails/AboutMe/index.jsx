@@ -75,7 +75,23 @@ const AboutMe = () => {
       </p>
 
       <p className='about-me__content'>
-        Je n’ai pas de technologie en particulier que je cherche à apprendre, car chacune a ses avantages et ses inconvénients en fonction du contexte d’utilisation. Je suis donc complètement ouvert à découvrir de nouvelles choses. Entre nous, le métier de développeur, ce n’est pas de connaître un langage par cœur, mais de trouver des solutions aux problèmes. C’est d’apprendre en continu pour produire un code propre, optimisé et maintenable, tout en sachant rechercher rapidement les informations nécessaires pour répondre au mieux aux attentes du client. 
+        Cependant, je suis conscient que mon profil actuel n’attire pas suffisamment les recruteurs et que j’ai des difficultés à trouver un emploi dans ce qui me passionne vraiment. C’est pour cette raison que j’ai décidé de prendre les choses en main en me lançant dans une alternance. J’ai choisi OpenClassrooms pour sa flexibilité, qui me permet de conjuguer théorie et pratique.
+      </p>
+
+      <p className='about-me__content'>
+        Ce qui m’intéresse surtout, c’est de prendre de l’expérience afin d’avoir un profil plus attractif et solide. Et pourquoi pas, continuer en CDI dans l’entreprise qui m’aura accueilli pour mon alternance. Le rythme est idéal : quatre jours en entreprise et un jour en formation, ce qui me permet d’être pleinement investi dans les projets.
+      </p>
+
+      <p className='about-me__content'>
+        Je suis particulièrement intéressé par React et Node.js, deux technologies que j’apprécie énormément pour leur efficacité et leur flexibilité. D’ailleurs, le cursus de ma formation se concentre sur ces deux technologies, ce qui me permet de renforcer mes compétences tout en travaillant sur des projets concrets.
+      </p>
+
+      <p className='about-me__content'>
+        Cela dit, je reste ouvert à découvrir d’autres technologies dans le domaine du web, car chacune a ses avantages et ses inconvénients en fonction du contexte d’utilisation. J’aime toujours apprendre de nouvelles choses, alors je ne suis pas fermé à d’autres langages ou frameworks.
+      </p>
+
+      <p className='about-me__content'>
+        Pour moi, le métier de développeur, ce n’est pas seulement de maîtriser une technologie, mais surtout de trouver des solutions aux problèmes. C’est d’apprendre en continu pour produire un code propre, optimisé et maintenable, tout en sachant rechercher rapidement les informations nécessaires pour répondre au mieux aux attentes du client.
       </p>
 
       <p className='about-me__content'>

@@ -10,7 +10,7 @@ import study from "../../assets/icons/student.png";
 import tech from "../../assets/icons/tech.png";
 import work from "../../assets/icons/work.png";
 import arrow from "../../assets/icons/arrow-down.png";
-import cv from "../../assets/pdf/CV-Erwann-Martin-2024.pdf";
+import cv from "../../assets/pdf/CV_Erwann_Martin_2024.pdf";
 
 //---------------------components -------------------------
 import { useDispatch, useSelector } from 'react-redux';
@@ -93,7 +93,7 @@ const About = () => {
             </div>
           </div>
           <div className="about__content__header__status">
-            <h2 className="about__content__header__status__title">Développeur fullstack</h2>
+            <h2 className="about__content__header__status__title">Développeur Web en recherche d'alternance</h2>
             <a href={cv} download="CV-Erwann-Martin.pdf" className="about__content__header__status__download">Télécharger mon CV</a>
           </div>
         </div>
